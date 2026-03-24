@@ -7,17 +7,13 @@ get_header();
     #admin-sync-panel { display: none; }
     body.logged-in #admin-sync-panel { display: block; }
     
-    .sync-loading {
-// ... existing code ...
     .agent-carousel-container {
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
 </style>
 
-<!-- Hero Section -->
 <section class="relative flex items-center justify-center text-center px-4 min-h-[400px]">
-    <!-- PERFORMANCE FIX: High Priority HTML Image -->
     <img src="http://advancedrealty.com/wp-content/uploads/sites/28/2026/02/R6KL1685-HDR-scaled.jpg" 
          alt="Real Estate Hero" 
          fetchpriority="high" 
@@ -25,9 +21,13 @@ get_header();
          class="absolute inset-0 w-full h-full object-cover z-0">
     <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-0"></div>
 
-    <div class="relative max-w-4xl z-10">
+    <div class="relative max-w-4xl z-10 flex flex-col items-center">
+        <img src="https://advancedrealty.com/wp-content/uploads/2026/03/nar_membershipmark_white.png" 
+             alt="REALTOR®" 
+             class="h-16 md:h-20 w-auto mb-6 drop-shadow-md">
+             
         <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4 drop-shadow-lg">
-            Find Your Way Home.
+            Find Your Way Home in St. George.
         </h1>
         <p class="text-xl md:text-2xl text-gray-100 mb-8 font-medium drop-shadow-md">
             St. George's Premier Real Estate Brokerage Team
@@ -43,7 +43,6 @@ get_header();
     </div>
 </section>
 
-<!-- SECRET ADMIN PANEL -->
 <div id="admin-sync-panel" class="bg-yellow-50 border-b border-yellow-200 p-6 shadow-inner">
     <div class="max-w-7xl mx-auto">
         <div class="flex items-center gap-3 mb-6">
@@ -98,7 +97,6 @@ get_header();
     </div>
 </div>
 
-<!-- SECTION 1: AGENT CAROUSEL (DYNAMIC) -->
 <section id="agents" class="py-16 bg-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-end mb-8">
@@ -106,7 +104,6 @@ get_header();
                 <h2 class="text-3xl font-extrabold text-gray-900">Meet Our Experts</h2>
                 <p class="text-gray-600 mt-2">Trusted advisors with deep roots in the Southern Utah community.</p>
             </div>
-            <!-- Carousel Controls -->
             <div class="hidden sm:flex space-x-2">
                 <button onclick="scrollCarousel(-1)" class="p-2 rounded-full border border-gray-300 hover:bg-adv-teal hover:text-white hover:border-adv-teal transition text-gray-500">
                     <i data-lucide="chevron-left" class="w-6 h-6"></i>
@@ -117,7 +114,6 @@ get_header();
             </div>
         </div>
 
-        <!-- Scrollable Container -->
         <div id="agent-container" class="agent-carousel-container flex gap-6 pb-4 px-1 overflow-x-auto snap-x snap-mandatory">
             
             <?php
@@ -125,7 +121,7 @@ get_header();
             $agent_args = array(
                 'post_type'      => 'agent',
                 'posts_per_page' => -1,
-                'orderby'        => 'menu_order', // Changed to allow manual drag & drop / numbering
+                'orderby'        => 'menu_order', 
                 'order'          => 'ASC' 
             );
             $agent_query = new WP_Query($agent_args);
@@ -133,19 +129,18 @@ get_header();
             if ($agent_query->have_posts()) :
                 while ($agent_query->have_posts()) : $agent_query->the_post();
                     
-                    // Pull ACF Data using your specific field names
+                    // Pull ACF Data
                     $agent_role  = get_post_meta(get_the_ID(), 'role', true);
                     $agent_phone = get_post_meta(get_the_ID(), 'phone', true);
                     $agent_email = get_post_meta(get_the_ID(), 'email', true);
                     
-                    // Pull Featured Image, fallback to a placeholder with their name
+                    // Pull Featured Image
                     $agent_photo = get_the_post_thumbnail_url(get_the_ID(), 'large');
                     if (!$agent_photo) {
                         $encoded_name = urlencode(get_the_title());
                         $agent_photo = "https://placehold.co/400x500/00A699/ffffff?text=" . $encoded_name;
                     }
             ?>
-                <!-- Dynamic Agent Card -->
                 <div class="agent-card bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex-shrink-0 w-72 snap-center">
                     <div class="h-64 bg-gray-200 relative">
                         <img src="<?php echo esc_url($agent_photo); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
@@ -171,12 +166,10 @@ get_header();
             <?php endif; ?>
 
         </div>
-        <!-- Mobile "Swipe" Tip -->
         <p class="text-center text-xs text-gray-400 mt-4 sm:hidden">Swipe to see more agents</p>
     </div>
 </section>
 
-<!-- SECTION 2: DYNAMIC PROPERTY LISTINGS -->
 <section id="idx-search" class="py-16 bg-gray-50 flex-grow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
@@ -250,12 +243,10 @@ get_header();
     </div>
 </section>
 
-<!-- Dual Call to Action: Sales & Management -->
 <section class="py-16 bg-white border-t border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <!-- Sales CTA -->
             <div class="bg-adv-teal rounded-2xl p-10 text-center text-white shadow-xl flex flex-col justify-center items-center transform transition duration-300 hover:-translate-y-2">
                 <div class="bg-white/20 p-4 rounded-full mb-6">
                     <i data-lucide="home" class="w-8 h-8 text-white"></i>
@@ -269,7 +260,6 @@ get_header();
                 </a>
             </div>
 
-            <!-- Property Management CTA -->
             <div class="bg-gray-800 rounded-2xl p-10 text-center text-white shadow-xl flex flex-col justify-center items-center transform transition duration-300 hover:-translate-y-2">
                 <div class="bg-gray-700 p-4 rounded-full mb-6">
                     <i data-lucide="key" class="w-8 h-8 text-adv-teal"></i>

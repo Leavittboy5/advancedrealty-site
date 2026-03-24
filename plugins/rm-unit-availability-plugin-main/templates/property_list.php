@@ -37,9 +37,10 @@ foreach ($propertyList as $property) {
     $rmBtns .= "<a target=\"_blank\" class=\"bg-color2 bg-color1-hover font2\" href=\"https://" . $coCode . ".twa.rentmanager.com/ApplyNow?locations=" . $location . "&propertyID=" . $property->propID . "\">Apply Now</a>";
   }
 
+  // UPDATED: Changed the classes here to use the Theme's dark blue tailwind styles (bg-sky-700)
   if ((getBoolOptions($property, 'propDetailLink'))) {
     $locationQuery = "&location=".$property->location;
-    $rmBtns .= "<a class=\"bg-color2 bg-color1-hover font2\" href=\"" . getLinkOptions($property, 'propDetailPage') . "?pid=" . $property->propID . $locationQuery."\">Details</a>";
+    $rmBtns .= "<a class=\"bg-sky-700 hover:bg-sky-800 text-white font-bold py-2 px-4 rounded transition duration-150\" href=\"" . getLinkOptions($property, 'propDetailPage') . "?pid=" . $property->propID . $locationQuery."\">Details</a>";
   }
 
 

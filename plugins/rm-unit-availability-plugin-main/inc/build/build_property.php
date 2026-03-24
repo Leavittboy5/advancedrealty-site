@@ -77,25 +77,29 @@ class Marketing {
 
   public function __construct($marketingValues) {
     $this->marketingValues = $marketingValues;
-    
   }
 
   public function __get($name) {
     $formattedName = $this->formatName($name);
  
     foreach ($this->marketingValues as $item) {
-      if ($this->formatName($this->formatName($item->Name) === $formattedName)) {
+      // FIXED: Removed the accidental double-formatName typo that was causing unpredictable matching
+      if ($this->formatName($item->Name) === $formattedName) {
         return $item->Value;
       }
     }
     return null;
-    }
+  }
+
+  // ADDED: This allows isset() and !empty() checks to work properly in the templates!
+  public function __isset($name) {
+    return $this->__get($name) !== null;
+  }
 
   private function formatName($name) {
     $name = str_replace(' ', '', $name);
     return strtolower($name);
   }
-
 }
 class UserDefined extends Marketing{
  
