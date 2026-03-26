@@ -4,9 +4,6 @@ get_header();
 ?>
 
 <style>
-    #admin-sync-panel { display: none; }
-    body.logged-in #admin-sync-panel { display: block; }
-    
     .agent-carousel-container {
         -ms-overflow-style: none;
         scrollbar-width: none;
@@ -42,60 +39,6 @@ get_header();
         </div>
     </div>
 </section>
-
-<div id="admin-sync-panel" class="bg-yellow-50 border-b border-yellow-200 p-6 shadow-inner">
-    <div class="max-w-7xl mx-auto">
-        <div class="flex items-center gap-3 mb-6">
-            <span class="bg-yellow-400 p-2 rounded-lg"><i data-lucide="zap" class="w-5 h-5 text-yellow-900"></i></span>
-            <div>
-                <p class="font-bold text-yellow-900 leading-none">Listing Power-Sync</p>
-                <p class="text-xs text-yellow-700 mt-1">Enter the listing details below to manually add or update a property.</p>
-            </div>
-        </div>
-        
-        <div class="space-y-4">
-            <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
-                <div class="md:col-span-2">
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Address</label>
-                    <input type="text" id="input-address" placeholder="123 Main St, St George, UT" class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Price</label>
-                    <input type="text" id="input-price" placeholder="$450,000" class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Beds</label>
-                    <input type="text" id="input-beds" placeholder="3" class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Baths</label>
-                    <input type="text" id="input-baths" placeholder="2" class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Sq. Ft.</label>
-                    <input type="text" id="input-sqft" placeholder="1,800" class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div>
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Image URL</label>
-                    <input type="text" id="raw-image-input" placeholder="https://..." class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-                <div>
-                    <label class="block text-[10px] uppercase font-bold text-yellow-700 mb-1">Specific MLS Link</label>
-                    <input type="text" id="raw-link-input" placeholder="https://my.flexmls.com/..." class="w-full p-3 border border-yellow-300 rounded-lg text-sm focus:ring-2 focus:ring-yellow-500 outline-none">
-                </div>
-                <div class="flex items-end">
-                    <button id="sync-btn" onclick="processAutoListing()" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 flex items-center justify-center gap-2">
-                        <i data-lucide="refresh-cw" class="w-4 h-4" id="sync-icon"></i>
-                        <span id="sync-text">Sync Listing</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 <section id="agents" class="py-16 bg-white border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,7 +117,8 @@ get_header();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
             <h2 class="text-3xl font-extrabold text-gray-900">Current Listings</h2>
-            <div class="w-16 h-1 bg-adv-teal mx-auto mt-4 rounded-full"></div>
+            <div class="w-16 h-1 bg-adv-teal mx-auto mt-4 mb-4 rounded-full"></div>
+            <p class="text-sm text-gray-500">Listing data provided by FlexMLS. Information deemed reliable but not guaranteed.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -183,11 +127,14 @@ get_header();
             $query = new WP_Query($args);
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post();
-                    $price     = get_post_meta(get_the_ID(), 'price', true);
-                    $bedrooms  = get_post_meta(get_the_ID(), 'bedrooms', true);
-                    $bathrooms = get_post_meta(get_the_ID(), 'bathrooms', true);
-                    $sq_ft     = get_post_meta(get_the_ID(), 'sq_ft', true);
-                    $mls_link  = get_post_meta(get_the_ID(), 'mls_link', true);
+                    $price          = get_post_meta(get_the_ID(), 'price', true);
+                    $bedrooms       = get_post_meta(get_the_ID(), 'bedrooms', true);
+                    $bathrooms      = get_post_meta(get_the_ID(), 'bathrooms', true);
+                    $sq_ft          = get_post_meta(get_the_ID(), 'sq_ft', true);
+                    $mls_link       = get_post_meta(get_the_ID(), 'mls_link', true);
+                    
+                    // Pulls the custom Listing Status we added in functions.php
+                    $listing_status = get_post_meta(get_the_ID(), 'listing_status', true) ?: 'Active';
                     
                     $image_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
                     if(!$image_url) $image_url = get_post_meta(get_the_ID(), '_thumbnail_ext_url', true);
@@ -196,15 +143,45 @@ get_header();
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100">
                         <div class="relative h-64 w-full overflow-hidden bg-gray-100">
                             <img src="<?php echo esc_url($image_url); ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="<?php the_title(); ?>">
+                            
                             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-adv-teal shadow-sm">
-                                Active
+                                <?php echo esc_html($listing_status); ?>
                             </div>
+                            
                             <div class="absolute bottom-4 left-4 bg-adv-teal text-white px-4 py-2 rounded-xl font-bold shadow-lg">
                                 <?php echo esc_html($price ?: 'Contact for Price'); ?>
                             </div>
                         </div>
                         <div class="p-6 flex-grow flex flex-col">
-                            <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1"><?php the_title(); ?></h3>
+                            
+                            <?php
+                                // Improved logic to force City, State Zip to the second line
+                                $full_address = get_the_title();
+                                
+                                // This looks for "St George" or any word followed by ", UT" or a 5-digit zip
+                                // to determine where the street ends and the city begins.
+                                if (preg_match('/^(.*?)\s+((?:St George|Hurricane|Washington|Ivins|Santa Clara|Cedar City|La Verkin|Toquerville).*)$/i', $full_address, $matches)) {
+                                    $street = $matches[1];
+                                    $city_state_zip = $matches[2];
+                                } else {
+                                    // Fallback: If it can't find a city match, try to split before the last 2 words and zip
+                                    $addr_parts = explode(' ', $full_address);
+                                    if (count($addr_parts) > 3) {
+                                        $city_state_zip = implode(' ', array_slice($addr_parts, -4));
+                                        $street = implode(' ', array_slice($addr_parts, 0, -4));
+                                    } else {
+                                        $street = $full_address;
+                                        $city_state_zip = '';
+                                    }
+                                }
+                            ?>
+                            
+                            <h3 class="text-lg font-bold text-gray-900 line-clamp-1" title="<?php echo esc_attr($street); ?>"><?php echo esc_html($street); ?></h3>
+                            <?php if ($city_state_zip): ?>
+                                <p class="text-sm text-gray-500 mb-4 line-clamp-1"><?php echo esc_html($city_state_zip); ?></p>
+                            <?php else: ?>
+                                <div class="mb-4"></div>
+                            <?php endif; ?>
                             
                             <div class="grid grid-cols-3 gap-2 mb-8 border-y border-gray-50 py-4">
                                 <div class="text-center">
@@ -236,7 +213,6 @@ get_header();
                 <div class="col-span-full text-center py-24 bg-white rounded-3xl border border-dashed border-gray-300">
                     <i data-lucide="home" class="w-12 h-12 text-gray-300 mx-auto mb-4"></i>
                     <p class="text-gray-500 font-medium">No active listings found.</p>
-                    <p class="text-xs text-gray-400 mt-1">Use the Admin Sync panel above to add your first property.</p>
                 </div>
             <?php endif; ?>
         </div>
@@ -284,64 +260,6 @@ get_header();
         container.scrollBy({
             left: direction * scrollAmount,
             behavior: 'smooth'
-        });
-    }
-
-    function processAutoListing() {
-        const address = document.getElementById('input-address').value;
-        const price = document.getElementById('input-price').value;
-        const beds = document.getElementById('input-beds').value;
-        const baths = document.getElementById('input-baths').value;
-        const sqft = document.getElementById('input-sqft').value;
-        
-        const image = document.getElementById('raw-image-input').value;
-        const specificLink = document.getElementById('raw-link-input').value; 
-        
-        const btn = document.getElementById('sync-btn');
-        const text = document.getElementById('sync-text');
-        const icon = document.getElementById('sync-icon');
-
-        if (!address) {
-            alert("Please enter at least the property address.");
-            return;
-        }
-
-        // Visual feedback
-        btn.classList.add('sync-loading');
-        text.innerText = "Processing...";
-        icon.classList.add('animate-spin');
-
-        // Determine which link to use
-        let finalLink = specificLink;
-        if (!finalLink || finalLink.trim() === '') {
-            finalLink = 'https://my.flexmls.com/advancedrealty'; // The fallback
-        }
-
-        const formData = new FormData();
-        formData.append('action', 'create_listing_auto');
-        formData.append('address', address);
-        formData.append('price', price);
-        formData.append('beds', beds);
-        formData.append('baths', baths);
-        formData.append('sqft', sqft);
-        formData.append('image', image);
-        formData.append('link', finalLink);
-
-        // Send to WordPress AJAX handler
-        fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            alert(data);
-            location.reload(); 
-        })
-        .catch(error => {
-            alert("Sync Error. Please check your functions.php file.");
-            btn.classList.remove('sync-loading');
-            text.innerText = "Sync Listing";
-            icon.classList.remove('animate-spin');
         });
     }
 </script>

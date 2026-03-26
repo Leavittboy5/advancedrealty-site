@@ -7,6 +7,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('min-h-screen antialiased flex flex-col'); ?>>
+<?php wp_body_open(); // Essential for modern WP plugins and tracking scripts ?>
 
 <header class="bg-white shadow-xl sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
@@ -58,11 +59,22 @@
             </div>
         </nav>
         
-        <div class="md:hidden flex flex-col items-end space-y-2 w-48">
-            <a href="<?php echo home_url('/contact'); ?>" class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-150 text-sm w-full text-center">
-                Contact Us
-            </a>
+        <div class="md:hidden flex flex-col items-end space-y-2 w-56">
             
+            <div class="relative w-full">
+                <button onclick="document.getElementById('mobile-services').classList.toggle('hidden')" class="bg-slate-900 text-sm font-bold text-white hover:bg-slate-800 py-2 px-4 rounded-lg flex items-center justify-between transition duration-150 w-full text-left shadow-md">
+                    <span>Our Services</span>
+                    <svg class="w-4 h-4 ml-1 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="mobile-services" class="hidden absolute right-0 top-full mt-2 w-full bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-50">
+                    <a href="<?php echo home_url('/real-estate'); ?>" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-adv-teal transition-colors text-sm font-medium border-b border-gray-50">Real Estate (Buy/Sell)</a>
+                    <a href="https://advancedrealty.com/rental-listings/" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-adv-teal transition-colors text-sm font-medium border-b border-gray-50">Available Rentals</a>
+                    <a href="<?php echo home_url('/residential-management'); ?>" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-adv-teal transition-colors text-sm font-medium border-b border-gray-50">Residential Mgmt</a>
+                    <a href="<?php echo home_url('/hoa-management'); ?>" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-adv-teal transition-colors text-sm font-medium border-b border-gray-50">HOA Mgmt</a>
+                    <a href="<?php echo home_url('/commercial-management'); ?>" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-adv-teal transition-colors text-sm font-medium">Commercial Mgmt</a>
+                </div>
+            </div>
+
             <div class="relative w-full">
                 <button onclick="document.getElementById('mobile-client-portals').classList.toggle('hidden')" class="bg-adv-teal text-sm font-bold text-white hover:opacity-90 py-2 px-4 rounded-lg flex items-center justify-between transition duration-150 w-full text-left shadow-md">
                     <span>Client Portals</span>
@@ -76,6 +88,10 @@
                     <a href="http://residentwebaccess.rentmanager.com/CustomerLogin.aspx?corpid=advr" target="_blank" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-adv-teal transition-colors text-sm font-medium">Storage Portal</a>
                 </div>
             </div>
+
+            <a href="<?php echo home_url('/contact'); ?>" class="bg-gray-100 hover:bg-gray-200 text-gray-900 border border-gray-300 font-bold py-2 px-4 rounded-lg shadow-sm transition duration-150 text-sm w-full text-center">
+                Contact Us
+            </a>
         </div>
     </div>
 </header>

@@ -90,26 +90,41 @@ function refresh_flexmls_listings_automatically() {
     if (is_wp_error($response)) return;
     $html = wp_remote_retrieve_body($response);
 
-    preg_match_all('/<div class="listing-card".*?>(.*?)<\/div>\s*<\/div>/s', $html, $matches);
+    // Break the HTML into individual property blocks based on FlexMLS's new code
+    $html_blocks = explode('<div class="listing-group">', $html);
+    array_shift($html_blocks); // Remove everything before the first property
 
-    if (empty($matches[1])) return;
+    if (empty($html_blocks)) return;
 
     $active_mls_addresses = array();
 
-    foreach ($matches[1] as $card_html) {
-        preg_match('/<div class="price">(.*?)<\/div>/', $card_html, $price);
-        preg_match('/<div class="address">(.*?)<\/div>/', $card_html, $address);
-        preg_match('/title="Total Bedrooms">.*?<div class="value".*?>(.*?)<\/div>/s', $card_html, $beds);
-        preg_match('/title="Total Bathrooms">.*?<div class="value".*?>(.*?)<\/div>/s', $card_html, $baths);
-        preg_match('/title="Total SqFt">.*?<div class="value".*?>(.*?)<\/div>/s', $card_html, $sqft);
-        preg_match('/<a href="(.*?)".*?class="listing-link"/', $card_html, $link);
-        preg_match('/<img.*?src="(.*?)"/', $card_html, $img);
+    foreach ($html_blocks as $card_html) {
+        // Extract Price
+        preg_match('/<div class="price">([^<]+)<\/div>/', $card_html, $price);
+        
+        // Extract Address
+        preg_match('/<div class="line-one">([^<]+)<\/div>/', $card_html, $line_one);
+        preg_match('/<div class="line-two">([^<]+)<\/div>/', $card_html, $line_two);
+        $address = (isset($line_one[1]) ? trim($line_one[1]) : '') . ' ' . (isset($line_two[1]) ? trim($line_two[1]) : '');
+        
+        // Extract Details
+        preg_match('/Total Bedrooms<\/div>\s*<div class="value"[^>]*>([^<]+)<\/div>/', $card_html, $beds);
+        preg_match('/Total Bathrooms<\/div>\s*<div class="value"[^>]*>([^<]+)<\/div>/', $card_html, $baths);
+        preg_match('/Total SqFt<\/div>\s*<div class="value"[^>]*>([^<]+)<\/div>/', $card_html, $sqft);
+        
+        // Extract Link, Image & Status
+        preg_match('/data-href="([^"]+)"/', $card_html, $link);
+        preg_match('/<img[^>]*src="([^"]+)"/', $card_html, $img);
+        
+        // NEW: Grabs the status (Active, Back on Market, Under Contract, etc.)
+        preg_match('/<div class="summary-status[^>]*>([^<]+)<\/div>/', $card_html, $status_match);
 
-        $clean_address = isset($address[1]) ? sanitize_text_field($address[1]) : '';
-        if (!$clean_address) continue;
+        $clean_address = sanitize_text_field(trim($address));
+        if (empty($clean_address)) continue;
 
         $active_mls_addresses[] = html_entity_decode($clean_address);
 
+        // Check if listing already exists
         $args = array(
             'title'                  => $clean_address,
             'post_type'              => 'listing',
@@ -126,6 +141,7 @@ function refresh_flexmls_listings_automatically() {
             'post_content' => 'Automatically imported listing.',
             'post_type'    => 'listing',
             'post_status'  => 'publish',
+            'post_author'  => 1, // Ensures the post isn't hidden
         );
 
         if ($existing_id) {
@@ -142,12 +158,16 @@ function refresh_flexmls_listings_automatically() {
             update_post_meta($result_id, 'sq_ft', isset($sqft[1]) ? sanitize_text_field($sqft[1]) : '');
             update_post_meta($result_id, 'mls_link', isset($link[1]) ? 'https://my.flexmls.com' . esc_url_raw($link[1]) : '');
             
+            // Saves the status to the database! Fallbacks to 'Active' just in case it is blank.
+            update_post_meta($result_id, 'listing_status', isset($status_match[1]) ? sanitize_text_field(trim($status_match[1])) : 'Active');
+            
             if (isset($img[1])) {
                 update_post_meta($result_id, '_thumbnail_ext_url', esc_url_raw($img[1]));
             }
         }
     }
 
+    // Draft properties that are no longer on FlexMLS
     if (!empty($active_mls_addresses)) {
         $all_listings_query = new WP_Query(array(
             'post_type'      => 'listing',
@@ -171,7 +191,7 @@ function refresh_flexmls_listings_automatically() {
 }
 
 if (!wp_next_scheduled('daily_flexmls_refresh')) {
-    wp_schedule_event(time(), 'hourly', 'daily_flexmls_refresh');
+    wp_schedule_event(time(), 'daily', 'daily_flexmls_refresh');
 }
 add_action('daily_flexmls_refresh', 'refresh_flexmls_listings_automatically');
 

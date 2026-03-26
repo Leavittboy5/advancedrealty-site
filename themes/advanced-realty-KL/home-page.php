@@ -47,7 +47,7 @@ get_header();
                 <div class="text-6xl text-adv-teal mb-4"><i data-lucide="home" class="w-12 h-12"></i></div>
                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Available Rentals</h3>
                 <p class="text-gray-600 mb-4 text-sm">View our current availability of houses, condos, and apartments. Apply online easily.</p>
-                <p class="font-semibold text-adv-teal text-sm flex items-center">Search available rentals &rarr;</p>
+                <p class="font-semibold text-adv-teal text-sm flex items-center">Search Available Rentals &rarr;</p>
             </a>
             
             <a href="<?php echo home_url('/residential-management'); ?>" class="service-card p-6 sm:p-8 block">
