@@ -39,8 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_moveout'])) {
         $sign_date = sanitize_text_field($_POST['sign_date']);
         
         // 3. Prepare Email
-        $to = 'info@advancedrealty.com'; // <--- ENTER THE EMAIL TO RECEIVE THIS FORM
-        $from = 'noreply@advancedrealty.com'; // <--- MUST MATCH WP MAIL SMTP "FROM" ACCOUNT
+        $to = 'info@advancedrealty.com'; 
+        $from = 'no-reply@advancedrealty.com'; // Updated with hyphen
         $subject = 'New Move-Out Notice: ' . $tenant_name;
         
         $message = "You have received a new 30-Day Move-Out Notice from the website.\n\n";
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_moveout'])) {
         $message .= "Signature: " . $signature . "\n";
         $message .= "Date Signed: " . $sign_date . "\n";
         
-        // Anti-Spam Headers (Proofpoint Fix)
+        // Anti-Spam Headers
         $headers = array(
             'Content-Type: text/plain; charset=UTF-8',
             'From: Advanced Realty Website <' . $from . '>',
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_moveout'])) {
     }
 }
 
-// Calculate exactly 30 days from today for the calendar restriction
+// Calculate exactly 30 days from today
 $min_date = date('Y-m-d', strtotime('+30 days'));
 
 get_header(); ?>
@@ -100,7 +100,6 @@ get_header(); ?>
         box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
     
-    /* Beautiful, Highly Visible Inputs */
     .form-input {
         border: 1px solid #cbd5e1 !important;
         background-color: #f8fafc !important;
@@ -114,12 +113,11 @@ get_header(); ?>
     }
     .form-input:focus {
         outline: none;
-        border-color: #00A699 !important; /* Advanced Realty Teal */
+        border-color: #00A699 !important;
         box-shadow: 0 0 0 3px rgba(0, 166, 153, 0.2) !important;
         background-color: #fff !important;
     }
 
-    /* Input Layout Helpers */
     .w-full { width: 100%; margin-top: 5px; margin-bottom: 15px; display: block; }
     .w-inline { display: inline-block; width: auto; min-width: 220px; margin: 0 5px; }
     .w-date { width: 170px; min-width: 170px; }
@@ -131,6 +129,27 @@ get_header(); ?>
         margin: 30px 0;
         border-radius: 0 6px 6px 0;
     }
+
+    /* Styles for the static Opt-Out Disclaimer */
+    .disclaimer-box {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #475569;
+        line-height: 1.6;
+    }
+    .disclaimer-title {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #1e293b;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+    }
+
     .signature-section {
         display: flex; 
         gap: 30px; 
@@ -219,17 +238,12 @@ get_header(); ?>
                 </div>
 
                 <div style="margin-top: 40px;">
-                    <details class="mb-6 text-xs text-gray-600 group">
-                        <summary class="cursor-pointer font-medium text-gray-700 hover:text-gray-900 transition-colors list-none flex items-center">
-                            <span class="mr-2 transition-transform group-open:rotate-90">▶</span>
-                            Opt-Out disclaimer
-                        </summary>
-                        <div class="mt-3 p-4 bg-gray-50 border border-gray-200 rounded-lg shadow-sm leading-relaxed">
-                            By providing your phone number, you agree to receive text messages from Advanced Realty for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>.
-                        </div>
-                    </details>
+                    <div class="disclaimer-box">
+                        <span class="disclaimer-title">Opt-Out Disclaimer</span>
+                        By providing your phone number, you agree to receive text messages from Advanced Realty for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" style="color: #00A699; text-decoration: underline;" target="_blank">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" style="color: #00A699; text-decoration: underline;" target="_blank">Terms and Conditions</a>.
+                    </div>
 
-                    <div class="g-recaptcha" data-sitekey="6LdCR5UsAAAAAFKuaSnBWX3TjFD7viZqL4KYJusZ"></div> 
+                    <div class="g-recaptcha" style="margin-top: 25px;" data-sitekey="6LdCR5UsAAAAAFKuaSnBWX3TjFD7viZqL4KYJusZ"></div> 
                     
                     <button type="submit" name="submit_moveout" class="submit-btn">Submit Move-Out Notice</button>
                 </div>
