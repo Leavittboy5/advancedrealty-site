@@ -123,7 +123,7 @@ get_header();
                 ?>
                 
                 <div class="mt-4 p-4 bg-gray-50 border border-gray-200 rounded-lg shadow-sm text-xs text-gray-600 leading-relaxed">
-                    By providing your phone number, you agree to receive text messages from <strong>Trent W. Leavitt dba Advanced Realty</strong> for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>.
+                    By providing your phone number, you agree to receive text messages from <strong>Trent W. Leavitt P.C., dba Advanced Realty</strong> for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>.
                 </div>
             </div>
             

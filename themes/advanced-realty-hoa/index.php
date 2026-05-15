@@ -17,9 +17,9 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="<?php echo esc_url(get_hoa_var('owner_portal_url')); ?>" target="_blank" class="inline-block w-full sm:w-auto text-center px-8 py-4 bg-adv-teal text-white font-bold text-lg rounded-xl shadow-xl hover:bg-hoa-blue-dark transition duration-300 transform hover:scale-[1.01]">
+                        <a href="<?php echo esc_url(get_hoa_var('owner_portal_url')); ?>" target="_blank" class="inline-block w-full sm:w-auto text-center px-8 py-4 bg-adv-teal text-white font-bold text-lg rounded-xl shadow-xl hover:bg-adv-teal-dark transition duration-300 transform hover:scale-[1.01]">
                             Owner Portal / Payments →
-                        </a>
+                            </a>
                     </div>
                 </div>
 

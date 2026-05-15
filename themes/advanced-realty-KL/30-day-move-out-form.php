@@ -38,40 +38,137 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_moveout'])) {
         $signature = sanitize_text_field($_POST['signature']);
         $sign_date = sanitize_text_field($_POST['sign_date']);
         
-        // 3. Prepare Email
-        $to = 'info@advancedrealty.com'; // <--- ENTER THE EMAIL TO RECEIVE THIS FORM
-        $from = 'noreply@advancedrealty.com'; // <--- MUST MATCH WP MAIL SMTP "FROM" ACCOUNT
+        // 3. Prepare Standard Email Message
+        $to = 'info@advancedrealty.com'; 
+        $from = 'no-reply@advancedrealty.com'; 
         $subject = 'New Move-Out Notice: ' . $tenant_name;
         
-        $message = "You have received a new 30-Day Move-Out Notice from the website.\n\n";
-        $message .= "PRESENT RENTAL INFORMATION:\n";
+        $message = "You have received a new 30-Day Move-Out Notice from the website. A formatted PDF is attached.\n\n";
         $message .= "Name: " . $tenant_name . "\n";
-        $message .= "Email: " . $tenant_email . "\n";
         $message .= "Address: " . $tenant_address . "\n";
-        $message .= "Reason for Moving: " . $move_reason . "\n\n";
+        $message .= "Vacate Date: " . $vacate_date . "\n";
         
-        $message .= "VACATE DETAILS:\n";
-        $message .= "Vacating Date/Time: Noon on " . $vacate_date . "\n";
-        $message .= "Appointment Phone: " . $phone_number . "\n\n";
-        
-        $message .= "DEPOSIT REFUND FORWARDING ADDRESS:\n";
-        $message .= "Address: " . $forwarding_address . "\n\n";
-        
-        $message .= "AGREEMENT & SIGNATURE:\n";
-        $message .= "Signature: " . $signature . "\n";
-        $message .= "Date Signed: " . $sign_date . "\n";
-        
-        // Anti-Spam Headers (Proofpoint Fix)
         $headers = array(
             'Content-Type: text/plain; charset=UTF-8',
             'From: Advanced Realty Website <' . $from . '>',
             'Reply-To: ' . $tenant_name . ' <' . $tenant_email . '>'
         );
+
+        // ==========================================
+        // 4. GENERATE PDF ATTACHMENT
+        // ==========================================
+        $attachments = array();
         
-        // 4. Send Email
-        if (wp_mail($to, $subject, $message, $headers)) {
+        // Check if Dompdf is uploaded to the theme folder
+        $dompdf_path = get_stylesheet_directory() . '/dompdf/autoload.inc.php';
+        
+        if (file_exists($dompdf_path)) {
+            require_once $dompdf_path;
+            
+            // Build the HTML specifically for the PDF (TIGHTENED FOR 1 PAGE)
+            $pdf_html = '
+            <html>
+            <head>
+                <style>
+                    /* Adjusted sizing and spacing to fit on one page */
+                    body { font-family: "Helvetica", "Arial", sans-serif; color: #333; line-height: 1.3; font-size: 13px; }
+                    .container { padding: 15px 30px; }
+                    h2 { text-align: center; color: #0f172a; margin-bottom: 15px; font-size: 20px; }
+                    .info-box { background-color: #f1f5f9; padding: 15px; border-left: 4px solid #00A699; margin-bottom: 12px; }
+                    .info-box h3 { margin-top: 0; margin-bottom: 8px; font-size: 14px; }
+                    strong { color: #0f172a; }
+                    .field { margin-bottom: 5px; }
+                    .legal-text { font-size: 12px; margin-bottom: 12px; text-align: justify; }
+                    .signature-area { margin-top: 20px; border-top: 1px solid #cbd5e1; padding-top: 15px; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h2>30-DAY MOVE-OUT NOTICE</h2>
+                    
+                    <div class="legal-text">
+                        <strong>BE ADVISED:</strong> At least 30 days prior written notice is required before moving out of a rental at the end of your lease or in the event of permissive or contractual holdover. Partial month rentals are not permitted according to the terms of your lease or by law. This move-out notice does not abrogate any terms of the original lease.
+                    </div>
+
+                    <div class="info-box">
+                        <h3>PRESENT RENTAL INFORMATION</h3>
+                        <div class="field"><strong>Name:</strong> ' . esc_html($tenant_name) . '</div>
+                        <div class="field"><strong>Email:</strong> ' . esc_html($tenant_email) . '</div>
+                        <div class="field"><strong>Current Address:</strong> ' . esc_html($tenant_address) . '</div>
+                        <div class="field"><strong>Reason For Moving:</strong> ' . esc_html($move_reason) . '</div>
+                    </div>
+
+                    <div class="legal-text">
+                        I will have vacated my rental by noon on <strong>' . esc_html($vacate_date) . '</strong>. You are hereby authorized to re-rent the rental as of this date and time. I confirm that all keys will be returned by the date and time listed above. If I am not out and keys are not returned by the above date and time, I understand I will be totally and personally responsible for damage claimed by any new tenant and for continued rental charges and damages.
+                    </div>
+
+                    <div class="legal-text">
+                        In accordance with the lease agreement, I will allow prospective tenants or purchasers to see the rental during my last two weeks by calling <strong>' . esc_html($phone_number) . '</strong> for an appointment.
+                    </div>
+
+                    <div class="info-box" style="border-left-color: #cbd5e1;">
+                        <h3>FORWARDING INFORMATION FOR DEPOSIT REFUND</h3>
+                        <div class="field"><strong>Address:</strong> ' . esc_html($forwarding_address) . '</div>
+                    </div>
+
+                    <div class="legal-text">
+                        <strong>BE ADVISED:</strong> Cleaning and security deposits are refunded and/or a report of dissemination of deposit shall be sent within thirty (30) days of total vacancy of a rental. Terms of the original lease must have been satisfied. An inspection of the rental will be made to ensure it is completely cleaned—including vacuumed carpets, washed walls and baseboards, and clean appliances free from odors.
+                    </div>
+
+                    <div class="legal-text">
+                        <strong>CARPET CLEANING:</strong> Management will have your carpets cleaned and the cost will be deducted from your deposit. Any damage or cleaning not completed by the tenant will be done by management and the costs will be deducted from deposits.
+                    </div>
+
+                    <div class="signature-area">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td style="width: 60%;"><strong>SIGNATURE:</strong><br>' . esc_html($signature) . '</td>
+                                <td style="width: 40%;"><strong>DATE SIGNED:</strong><br>' . esc_html($sign_date) . '</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </body>
+            </html>';
+
+            // Initialize Dompdf
+            $options = new Dompdf\Options();
+            $options->set('isDefaultFont', 'Helvetica');
+            $dompdf = new Dompdf\Dompdf($options);
+            
+            $dompdf->loadHtml($pdf_html);
+            $dompdf->setPaper('A4', 'portrait');
+            $dompdf->render();
+            $pdf_output = $dompdf->output();
+            
+            // Save PDF to WordPress Uploads Temporary Directory
+            $upload_dir = wp_upload_dir();
+            $pdf_filename = 'Move-Out-Notice-' . sanitize_file_name($tenant_name) . '-' . time() . '.pdf';
+            $pdf_filepath = trailingslashit($upload_dir['path']) . $pdf_filename;
+            
+            file_put_contents($pdf_filepath, $pdf_output);
+            
+            // Add file to attachments array
+            if (file_exists($pdf_filepath)) {
+                $attachments[] = $pdf_filepath;
+            }
+        } else {
+            // Fallback: If Dompdf isn't installed, append notice to the text email
+            $message .= "\n\n(Notice to Admin: PDF could not be generated because the Dompdf library is missing from the theme folder.)";
+        }
+
+        // ==========================================
+        // 5. Send Email & Cleanup
+        // ==========================================
+        if (wp_mail($to, $subject, $message, $headers, $attachments)) {
             $form_status = 'success';
             $form_message = 'Your move-out notice has been successfully submitted. Thank you.';
+            
+            // Delete the temporary PDF from the server after sending
+            if (!empty($attachments) && file_exists($attachments[0])) {
+                unlink($attachments[0]);
+            }
+            
         } else {
             $form_status = 'error';
             $form_message = 'There was a problem sending your form. Please try again or contact us directly.';
@@ -79,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_moveout'])) {
     }
 }
 
-// Calculate exactly 30 days from today for the calendar restriction
+// Calculate exactly 30 days from today
 $min_date = date('Y-m-d', strtotime('+30 days'));
 
 get_header(); ?>
@@ -100,7 +197,6 @@ get_header(); ?>
         box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
     
-    /* Beautiful, Highly Visible Inputs */
     .form-input {
         border: 1px solid #cbd5e1 !important;
         background-color: #f8fafc !important;
@@ -114,12 +210,11 @@ get_header(); ?>
     }
     .form-input:focus {
         outline: none;
-        border-color: #00A699 !important; /* Advanced Realty Teal */
+        border-color: #00A699 !important;
         box-shadow: 0 0 0 3px rgba(0, 166, 153, 0.2) !important;
         background-color: #fff !important;
     }
 
-    /* Input Layout Helpers */
     .w-full { width: 100%; margin-top: 5px; margin-bottom: 15px; display: block; }
     .w-inline { display: inline-block; width: auto; min-width: 220px; margin: 0 5px; }
     .w-date { width: 170px; min-width: 170px; }
@@ -131,6 +226,27 @@ get_header(); ?>
         margin: 30px 0;
         border-radius: 0 6px 6px 0;
     }
+
+    /* Styles for the static Opt-Out Disclaimer */
+    .disclaimer-box {
+        margin-top: 25px;
+        padding: 15px;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        color: #475569;
+        line-height: 1.6;
+    }
+    .disclaimer-title {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #1e293b;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+    }
+
     .signature-section {
         display: flex; 
         gap: 30px; 
@@ -219,17 +335,12 @@ get_header(); ?>
                 </div>
 
                 <div style="margin-top: 40px;">
-                    <details class="mb-6 text-xs text-gray-600 group">
-                        <summary class="cursor-pointer font-medium text-gray-700 hover:text-gray-900 transition-colors list-none flex items-center">
-                            <span class="mr-2 transition-transform group-open:rotate-90">▶</span>
-                            Opt-Out disclaimer
-                        </summary>
-                        <div class="mt-3 p-4 bg-gray-50 border border-gray-200 rounded-lg shadow-sm leading-relaxed">
-                            By providing your phone number, you agree to receive text messages from Advanced Realty for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" class="text-teal-600 underline hover:text-teal-800" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>.
-                        </div>
-                    </details>
+                    <div class="disclaimer-box">
+                        <span class="disclaimer-title">Opt-Out Disclaimer</span>
+                        By providing your phone number, you agree to receive text messages from Advanced Realty for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" style="color: #00A699; text-decoration: underline;" target="_blank">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" style="color: #00A699; text-decoration: underline;" target="_blank">Terms and Conditions</a>.
+                    </div>
 
-                    <div class="g-recaptcha" data-sitekey="6LdCR5UsAAAAAFKuaSnBWX3TjFD7viZqL4KYJusZ"></div> 
+                    <div class="g-recaptcha" style="margin-top: 25px;" data-sitekey="6LdCR5UsAAAAAFKuaSnBWX3TjFD7viZqL4KYJusZ"></div> 
                     
                     <button type="submit" name="submit_moveout" class="submit-btn">Submit Move-Out Notice</button>
                 </div>

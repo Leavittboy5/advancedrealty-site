@@ -1,7 +1,4 @@
-</main> <!-- Closes the <main> tag from header.php -->
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 mt-12 py-8">
+</main> <footer class="bg-gray-800 mt-12 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
             <p>&copy; <?php echo date("Y"); ?> <?php echo get_hoa_var('hoa_name'); ?>. Managed Exclusively by <?php echo get_hoa_var('management_name'); ?>.</p>
             <p class="mt-2 text-gray-500">
@@ -9,11 +6,21 @@
                 <a href="<?php echo get_hoa_var('privacy_url'); ?>" class="hover:text-adv-teal">Privacy Policy</a> | 
                 <a href="<?php echo get_hoa_var('owner_portal_url'); ?>" target="_blank" class="hover:text-adv-teal">Member Login</a>
             </p>
+            
+            <div class="flex justify-center mt-6 opacity-75">
+                <img src="https://advancedrealty.com/wp-content/uploads/2026/03/equal-housing-opportunity-logo-1200w.png" 
+                     alt="Equal Housing Opportunity" 
+                     class="h-6 w-auto bg-white p-1 rounded-sm hover:opacity-100 transition duration-150">
+            </div>
         </div>
     </footer>
     
-    <!-- Custom JavaScript for image fallback -->
     <script>
+        // Initialize Lucide Icons if loaded
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
         window.onload = function() {
             const img = document.querySelector('img[alt="Management Logo"]');
             const fallback = document.getElementById('logo-text-fallback-hoa');
@@ -35,7 +42,6 @@
         };
     </script>
 
-    <!-- IMPORTANT: This hook lets WordPress load plugins and the admin bar -->
     <?php wp_footer(); ?>
 </body>
 </html>

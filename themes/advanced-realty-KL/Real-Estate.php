@@ -72,7 +72,7 @@ get_header();
             if ($agent_query->have_posts()) :
                 while ($agent_query->have_posts()) : $agent_query->the_post();
                     
-                    // Pull ACF Data
+                    // Pull Data
                     $agent_role  = get_post_meta(get_the_ID(), 'role', true);
                     $agent_phone = get_post_meta(get_the_ID(), 'phone', true);
                     $agent_email = get_post_meta(get_the_ID(), 'email', true);
@@ -84,17 +84,28 @@ get_header();
                         $agent_photo = "https://placehold.co/400x500/00A699/ffffff?text=" . $encoded_name;
                     }
             ?>
-                <div class="agent-card bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex-shrink-0 w-72 snap-center">
-                    <div class="h-64 bg-gray-200 relative">
-                        <img src="<?php echo esc_url($agent_photo); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6 text-center">
-                        <h3 class="text-xl font-bold text-gray-900"><?php the_title(); ?></h3>
-                        <p class="text-adv-teal font-semibold text-sm mb-4"><?php echo esc_html($agent_role ?: 'Realtor®'); ?></p>
-                        <div class="flex justify-center space-x-3">
-                            <a href="<?php echo $agent_phone ? 'tel:' . esc_attr($agent_phone) : '#'; ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-teal hover:text-white transition"><i data-lucide="phone" class="w-4 h-4"></i></a>
-                            <a href="<?php echo $agent_email ? 'mailto:' . esc_attr($agent_email) : '#'; ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-teal hover:text-white transition"><i data-lucide="mail" class="w-4 h-4"></i></a>
+                <div class="agent-card bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden flex-shrink-0 w-72 snap-center group transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    
+                    <a href="<?php the_permalink(); ?>" class="block">
+                        <div class="h-64 bg-gray-200 relative overflow-hidden">
+                            <img src="<?php echo esc_url($agent_photo); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
+                        <div class="pt-6 px-6 pb-2 text-center">
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-adv-teal transition-colors"><?php the_title(); ?></h3>
+                            <p class="text-adv-teal font-semibold text-sm mt-1"><?php echo esc_html($agent_role ?: 'Realtor®'); ?></p>
+                        </div>
+                    </a>
+
+                    <div class="px-6 pb-6 text-center">
+                        <div class="flex justify-center space-x-3 mt-4">
+                            <?php if($agent_phone): ?>
+                                <a href="tel:<?php echo esc_attr($agent_phone); ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-teal hover:text-white transition" title="Call"><i data-lucide="phone" class="w-4 h-4"></i></a>
+                            <?php endif; ?>
+                            <?php if($agent_email): ?>
+                                <a href="mailto:<?php echo esc_attr($agent_email); ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-teal hover:text-white transition" title="Email"><i data-lucide="mail" class="w-4 h-4"></i></a>
+                            <?php endif; ?>
+                        </div>
+                        <a href="<?php the_permalink(); ?>" class="inline-block mt-4 text-sm text-gray-500 hover:text-adv-teal font-medium">View Full Profile &rarr;</a>
                     </div>
                 </div>
             <?php 

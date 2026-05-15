@@ -9,12 +9,12 @@ get_header();
         <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
         <p class="text-lg text-gray-500 mb-8 border-b pb-4">
             Last Updated: March 9, 2026<br>
-            <strong>Company:</strong> Trent W. Leavitt dba Advanced Realty
+            <strong>Company:</strong> Trent W. Leavitt P.C., dba Advanced Realty
         </p>
 
         <div class="policy-content space-y-6 text-gray-700">
             
-            <p><strong>Trent W. Leavitt dba Advanced Realty</strong> is committed to protecting your privacy and securing your personal information. This policy outlines how we collect, use, disclose, and safeguard your data across all our service offerings, including Real Estate, Residential Rentals, HOA Management, Commercial Management, and Storage Services. By using our websites and services, you consent to the data practices described in this policy.</p>
+            <p><strongTrent W. Leavitt P.C., dba Advanced Realty</strong> is committed to protecting your privacy and securing your personal information. This policy outlines how we collect, use, disclose, and safeguard your data across all our service offerings, including Real Estate, Residential Rentals, HOA Management, Commercial Management, and Storage Services. By using our websites and services, you consent to the data practices described in this policy.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Information We Collect</h2>
             <p>We collect information necessary to provide our services. The types of personal information collected depend on your interaction with us (e.g., whether you are an applicant, tenant, owner, or general user).</p>
@@ -38,10 +38,11 @@ get_header();
 
             <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">4. Data Security & Sharing</h2>
             <p>We take reasonable steps to protect your personal information from unauthorized access and disclosure. However, no data transmission over the internet or method of electronic storage is 100% secure, and we cannot guarantee the absolute security of your information.</p>
+            <p>We do not sell your information.</p>
             <p><strong>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.</strong> All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">5. SMS / Text Messaging Privacy Policy</h2>
-            <p>Trent W. Leavitt dba Advanced Realty respects your privacy regarding mobile communications. In accordance with A2P 10DLC regulations, please note the following regarding your phone number and SMS text messaging:</p>
+            <p>Trent W. Leavitt P.C., dba Advanced Realty respects your privacy regarding mobile communications. In accordance with A2P 10DLC regulations, please note the following regarding your phone number and SMS text messaging:</p>
             <ul class="list-disc pl-6 space-y-2">
                 <li><strong>Data Collection & Consent:</strong> We collect your mobile phone number and consent to send you service-related and informational text messages only when you voluntarily provide it and opt-in to our communications.</li>
                 <li><strong>Data Usage:</strong> Mobile data is strictly used for communication related to your property, application, tenancy, or our services.</li>
@@ -62,7 +63,7 @@ get_header();
 
             <h2 id="contact" class="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Contact Information</h2>
             <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
-            <p class="font-semibold mt-4">Trent W. Leavitt dba Advanced Realty</p>
+            <p class="font-semibold mt-4">Trent W. Leavitt P.C., dba Advanced Realty</p>
             <p>Email: <a href="mailto:info@advancedrealty.com" class="text-adv-teal hover:underline font-medium">info@advancedrealty.com</a></p>
             <p>Phone: (435) 674-4343</p>
             <p>Address: 1156 E 700 S Ste. 1, St. George, UT 84790</p>

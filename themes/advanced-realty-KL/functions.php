@@ -50,6 +50,9 @@ function register_advanced_realty_listings() {
         'labels' => $labels,
         'public' => true,
         'has_archive' => true,
+        'publicly_queryable' => false,  // Disables the individual listing URL to prevent 404s
+        'query_var'          => false,  // Prevents URL queries
+        'rewrite'            => false,  // No URL rewriting for individual items
         'menu_icon' => 'dashicons-admin-home',
         'supports' => array( 'title', 'thumbnail', 'custom-fields' ),
         'show_in_rest' => true,
@@ -72,8 +75,10 @@ function register_advanced_realty_agents() {
         'labels' => $labels,
         'public' => true,
         'has_archive' => false,
+        'rewrite' => array( 'slug' => 'agent', 'with_front' => false ), 
         'menu_icon' => 'dashicons-businessman', 
-        'supports' => array( 'title', 'thumbnail', 'page-attributes' ), 
+        // I added 'editor' right here so the biography box appears!
+        'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ), 
         'show_in_rest' => true,
     );
     register_post_type( 'agent', $args );

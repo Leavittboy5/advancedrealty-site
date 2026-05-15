@@ -8,6 +8,9 @@ function advanced_realty_hoa_scripts() {
     
     // Loads Tailwind CSS safely via WordPress
     wp_enqueue_script( 'tailwindcss', 'https://cdn.tailwindcss.com', array(), null, false );
+    
+    // Loads Lucide Icons to match main site branding
+    wp_enqueue_script( 'lucide-icons', 'https://unpkg.com/lucide@latest', array(), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'advanced_realty_hoa_scripts' );
 
@@ -42,7 +45,11 @@ function hoa_theme_customize_register( $wp_customize ) {
     $add_setting('hero_image_url', 'Hero Image URL', 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', 'url');
     $add_setting('annual_meeting_date', 'Annual Meeting Date', 'October 15, 2025');
     $add_setting('acc_form_url', 'ACC Form URL', 'https://advancedrealty.com/wp-content/uploads/2026/02/Architectural-Control-Committee-ACC-Form-Template.pdf', 'url');
-    $add_setting('documents_url', 'Governing Documents URL', '#', 'url');
+    
+    // Split generic "Documents" into specific CCRs and Bylaws
+    $add_setting('ccrs_url', 'CC&Rs URL', '#', 'url');
+    $add_setting('bylaws_url', 'Bylaws URL', '#', 'url');
+    
     $add_setting('rental_quote_url', 'Rental Quote URL', 'https://advancedrealty.com/get-rental-quote', 'url');
     $add_setting('storage_url', 'Storage URL', 'https://stgeorgestorage.com', 'url');
     $add_setting('tos_url', 'Terms of Service URL', '#', 'url');
@@ -53,9 +60,10 @@ add_action( 'customize_register', 'hoa_theme_customize_register' );
 
 // 3. Helper Function to grab these variables anywhere in our theme
 function get_hoa_var($key) {
-    // AUTOMATICALLY PULL THE HOA NAME FROM WORDPRESS SITE TITLE!
+    // AUTOMATICALLY PULL THE HOA NAME FROM WORDPRESS SITE TITLE WITH A CLEAN FALLBACK!
     if ($key === 'hoa_name') {
-        return get_bloginfo('name'); 
+        $name = get_bloginfo('name');
+        return !empty($name) ? $name : 'Community Association'; 
     }
 
     // Default fallbacks in case a setting is left blank
@@ -70,7 +78,8 @@ function get_hoa_var($key) {
         'hero_image_url'       => 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
         'annual_meeting_date'  => 'October 15, 2025',
         'acc_form_url'         => 'https://advancedrealty.com/wp-content/uploads/2026/02/Architectural-Control-Committee-ACC-Form-Template.pdf',
-        'documents_url'        => '#',
+        'ccrs_url'             => '#',
+        'bylaws_url'           => '#',
         'rental_quote_url'     => 'https://advancedrealty.com/get-rental-quote',
         'storage_url'          => 'https://stgeorgestorage.com',
         'tos_url'              => 'https://advancedrealty.com/terms-and-conditions/',
@@ -78,6 +87,6 @@ function get_hoa_var($key) {
     ];
 
     // Grab the dynamic value from the WordPress database, or use default
-    return get_theme_mod($key, $defaults[$key]);
+    return get_theme_mod($key, $defaults[$key] ?? '');
 }
 ?>
