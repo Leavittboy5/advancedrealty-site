@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit_moveout'])) {
                     body { font-family: "Helvetica", "Arial", sans-serif; color: #333; line-height: 1.3; font-size: 13px; }
                     .container { padding: 15px 30px; }
                     h2 { text-align: center; color: #0f172a; margin-bottom: 15px; font-size: 20px; }
-                    .info-box { background-color: #f1f5f9; padding: 15px; border-left: 4px solid #00A699; margin-bottom: 12px; }
+                    .info-box { background-color: #f1f5f9; padding: 15px; border-left: 4px solid #366366; margin-bottom: 12px; }
                     .info-box h3 { margin-top: 0; margin-bottom: 8px; font-size: 14px; }
                     strong { color: #0f172a; }
                     .field { margin-bottom: 5px; }
@@ -210,7 +210,7 @@ get_header(); ?>
     }
     .form-input:focus {
         outline: none;
-        border-color: #00A699 !important;
+        border-color: #366366 !important;
         box-shadow: 0 0 0 3px rgba(0, 166, 153, 0.2) !important;
         background-color: #fff !important;
     }
@@ -222,7 +222,7 @@ get_header(); ?>
     .info-box {
         background: #f1f5f9; 
         padding: 25px; 
-        border-left: 5px solid #00A699; 
+        border-left: 5px solid #366366;
         margin: 30px 0;
         border-radius: 0 6px 6px 0;
     }
@@ -258,7 +258,7 @@ get_header(); ?>
     .sig-block { flex: 1; min-width: 250px; }
 
     .submit-btn {
-        background-color: #00A699; 
+        background-color: #366366;
         color: #fff;
         padding: 14px 35px;
         border: none;
@@ -271,7 +271,7 @@ get_header(); ?>
         transition: background 0.2s;
         width: 100%;
     }
-    .submit-btn:hover { background-color: #008f83; }
+    .submit-btn:hover { background-color: #2b4f51; }
     .msg-success { background: #d4edda; color: #155724; padding: 20px; border-radius: 6px; margin-bottom: 25px; font-weight: 600;}
     .msg-error { background: #f8d7da; color: #721c24; padding: 20px; border-radius: 6px; margin-bottom: 25px; font-weight: 600;}
 </style>
@@ -337,7 +337,7 @@ get_header(); ?>
                 <div style="margin-top: 40px;">
                     <div class="disclaimer-box">
                         <span class="disclaimer-title">Opt-Out Disclaimer</span>
-                        By providing your phone number, you agree to receive text messages from Advanced Realty for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" style="color: #00A699; text-decoration: underline;" target="_blank">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" style="color: #00A699; text-decoration: underline;" target="_blank">Terms and Conditions</a>.
+                        By providing your phone number, you agree to receive text messages from Advanced Realty for the purpose of communicating community news, urgent notifications, and events. Reply “STOP” to opt-out anytime or reply “HELP” for more information. Message and data rates may apply. Message frequency will vary. For more information, please read our <a href="https://advancedrealty.com/privacy-policy" style="color: #366366; text-decoration: underline;" target="_blank">Privacy Policy</a> and <a href="https://advancedrealty.com/terms-and-conditions" style="color: #366366; text-decoration: underline;" target="_blank">Terms and Conditions</a>.
                     </div>
 
                     <div class="g-recaptcha" style="margin-top: 25px;" data-sitekey="6LdCR5UsAAAAAFKuaSnBWX3TjFD7viZqL4KYJusZ"></div> 

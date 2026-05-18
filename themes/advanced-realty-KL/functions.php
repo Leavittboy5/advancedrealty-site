@@ -13,8 +13,8 @@ function advanced_realty_child_scripts() {
         theme: {
             extend: {
                 colors: {
-                    'adv-teal': '#00A699',
-                    'adv-teal-dark': '#008f83'
+                    'adv-teal': '#366366',
+                    'adv-teal-dark': '#2b4f51'
                 }
             }
         }
