@@ -85,8 +85,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-adv-teal: #00A699;
-    --color-adv-teal-dark: #008f83;
+    --color-adv-teal: #366366;
+    --color-adv-teal-dark: #2b4f51;
   }
 }
 @layer base {
@@ -1242,10 +1242,10 @@
       }
     }
   }
-  .group-hover\:text-\[\#00A699\] {
+  .group-hover\:text-\[\#366366\] {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
-        color: #00A699;
+        color: #366366;
       }
     }
   }

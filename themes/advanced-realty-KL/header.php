@@ -13,7 +13,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         
         <a href="<?php echo home_url(); ?>" class="flex items-center space-x-2">
-            <img src="https://advancedrealty.com/wp-content/uploads/2025/11/JPG-Advanced-Realty-Logo.jpg" 
+            <img src="https://advancedrealty.com/wp-content/uploads/2026/05/Logo-3at-small.png"
                  onerror="this.style.display='none'; document.getElementById('logo-text-fallback').classList.remove('hidden');"
                  alt="Advanced Realty Logo" class="h-16 w-auto">
             <span id="logo-text-fallback" class="text-3xl font-extrabold text-adv-teal hidden">ADVANCED REALTY</span>

@@ -72,10 +72,10 @@ get_header();
             </a>
 
             <a href="https://stgeorgestorage.com" target="_blank" class="group p-6 sm:p-8 bg-adv-teal text-white border-t-8 border-adv-teal rounded-xl shadow-md hover:bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(0,166,153,0.3)] block cursor-pointer">
-                <div class="text-white group-hover:text-[#00A699] mb-4 transition-colors duration-300"><i data-lucide="archive" class="w-12 h-12"></i></div>
+                <div class="text-white group-hover:text-[#366366] mb-4 transition-colors duration-300"><i data-lucide="archive" class="w-12 h-12"></i></div>
                 <h3 class="text-2xl font-bold mb-2 group-hover:text-gray-900 transition-colors duration-300">Dedicated Storage Facilities</h3>
                 <p class="text-teal-100 group-hover:text-gray-600 mb-4 text-sm transition-colors duration-300">Find climate-controlled, commercial-grade, or drive-up units across multiple local sites.</p>
-                <p class="font-semibold text-white group-hover:text-[#00A699] text-sm flex items-center transition-colors duration-300">Visit StGeorgeStorage.com &rarr;</p>
+                <p class="font-semibold text-white group-hover:text-[#366366] text-sm flex items-center transition-colors duration-300">Visit StGeorgeStorage.com &rarr;</p>
             </a>
         </div>
     </div>
