@@ -121,7 +121,7 @@
                     <span class="text-adv-teal font-bold uppercase tracking-widest text-sm">Sponsored Services</span>
                     
                     <div class="flex justify-center items-center mt-6 mb-4">
-                        <img src="https://advancedrealty.com/wp-content/uploads/2025/11/JPG-Advanced-Realty-Logo.jpg" alt="Advanced Realty Logo" class="h-16 md:h-20 object-contain drop-shadow-sm mix-blend-multiply">
+                        <img src="https://advancedrealty.com/wp-content/uploads/2026/05/Logo-3at-small.png" alt="Advanced Realty Logo" class="h-16 md:h-20 object-contain drop-shadow-sm mix-blend-multiply">
                     </div>
                     
                     <p class="text-gray-600 max-w-2xl mx-auto mt-3">Explore our trusted services in Southern Utah, offering expert solutions for your residential and commercial needs.</p>

@@ -23,7 +23,7 @@
             </div>
             
             <a href="<?php echo get_hoa_var('management_url'); ?>" target="_blank" class="flex items-center space-x-2 group">
-                 <img src="https://advancedrealty.com/wp-content/uploads/2026/03/HOA-Logo-Transparent.png" 
+                 <img src="https://advancedrealty.com/wp-content/uploads/2026/05/Logo-3at-small.png" 
                       onerror="this.style.display='none'; document.getElementById('logo-text-fallback-hoa').classList.remove('hidden');"
                       alt="Management Logo" class="h-12 opacity-80 group-hover:opacity-100 transition duration-150">
                 <span id="logo-text-fallback-hoa" class="text-xl font-extrabold text-adv-teal hidden"><?php echo strtoupper(get_hoa_var('management_name')); ?></span>

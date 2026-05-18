@@ -10,8 +10,8 @@ get_header();
 ?>
 
 <style>
-    .contact-form-wrapper .frm_style_formidable-style.with_frm_style .frm_submit button { background-color: #00A699 !important; }
-    .contact-form-wrapper .frm_style_formidable-style.with_frm_style .frm_submit button:hover { background-color: #008f83 !important; }
+    .contact-form-wrapper .frm_style_formidable-style.with_frm_style .frm_submit button { background-color: #366366 !important; }
+    .contact-form-wrapper .frm_style_formidable-style.with_frm_style .frm_submit button:hover { background-color: #2b4f51 !important; }
 </style>
 
 <section class="relative flex items-center justify-center text-center px-4 min-h-[400px]">
