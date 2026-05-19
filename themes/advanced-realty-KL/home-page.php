@@ -57,7 +57,7 @@ get_header();
             ?>
                 <!-- Pillar 1: Buy & Sell Real Estate -->
                 <div class="swiper-slide relative w-full h-full">
-                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://advancedrealty.com/wp-content/uploads/2026/03/R6KL6998-Pano-scaled-1.webp');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://advancedrealty.com/wp-content/uploads/2026/02/R6KL1685-HDR-scaled-1.jpg');"></div>
                     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-0"></div>
                     
                     <div class="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 sm:px-6 lg:px-8">
@@ -73,7 +73,7 @@ get_header();
 
                 <!-- Pillar 2: Available Rentals -->
                 <div class="swiper-slide relative w-full h-full">
-                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://advancedrealty.com/wp-content/uploads/2026/03/R6KL1685-HDR-scaled-1.webp');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://advancedrealty.com/wp-content/uploads/2026/02/R6KL6998-Pano-scaled.jpg');"></div>
                     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-0"></div>
                     
                     <div class="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 sm:px-6 lg:px-8">
@@ -105,7 +105,7 @@ get_header();
 
                 <!-- Pillar 4: HOA Management -->
                 <div class="swiper-slide relative w-full h-full">
-                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://advancedrealty.com/wp-content/uploads/2022/08/20220812010942074358000000-o-e1739313106312.jpg');"></div>
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://advancedrealty.com/wp-content/uploads/2026/02/HOAbg-1.jpg');"></div>
                     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-0"></div>
                     
                     <div class="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 sm:px-6 lg:px-8">
@@ -243,7 +243,7 @@ get_header();
                 crossFade: true
             },
             autoplay: {
-                delay: 6000, 
+                delay: 4000, 
                 disableOnInteraction: false, 
             },
             pagination: {
