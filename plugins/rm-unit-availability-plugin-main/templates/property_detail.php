@@ -75,7 +75,7 @@ if (!empty($property)) {
     
     $thumbnailsHTML = '';
     foreach($imageSources as $index => $url) {
-        $activeClass = $index === 0 ? 'border-adv-teal opacity-100 scale-105' : 'border-transparent opacity-60';
+        $activeClass = $index === 0 ? 'border-adv-gold opacity-100 scale-105' : 'border-transparent opacity-60';
         $thumbnailsHTML .= '<div class="snap-center shrink-0">
             <img src="'.$url.'" class="property-thumbnail w-24 h-16 md:w-32 md:h-20 object-cover rounded-lg cursor-pointer border-2 hover:opacity-100 transition duration-300 '.$activeClass.'" onclick="changeMainImage(this, \''.$url.'\', '.$index.')" alt="Thumbnail">
         </div>';
@@ -86,7 +86,7 @@ if (!empty($property)) {
     $amenityList = !empty($property->amenities) ? $property->amenities : null;
     if($amenityList) {
         foreach((array)$amenityList as $amenity) {
-            $amenitiesHTML .= '<li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-0.5 text-adv-teal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="break-words">'.trim($amenity).'</span></li>';
+            $amenitiesHTML .= '<li class="flex items-start"><svg class="w-5 h-5 mr-2 mt-0.5 text-adv-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="break-words">'.trim($amenity).'</span></li>';
         }
     }
 
@@ -111,7 +111,7 @@ if (!empty($property)) {
     </style>
     <div class="rmwb_property_detail antialiased w-full max-w-full overflow-x-hidden pb-10">
         <div class="mb-4">
-            <a href="javascript:history.back()" class="text-gray-700 hover:text-adv-teal font-semibold transition text-sm flex items-center w-fit">
+            <a href="javascript:history.back()" class="text-gray-700 hover:text-adv-gold font-semibold transition text-sm flex items-center w-fit">
                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                 Back to Listings
             </a>
@@ -152,7 +152,7 @@ if (!empty($property)) {
                 </section>
             </div>
             <div class="lg:col-span-1 w-full">
-                <div class="sticky top-24 bg-white p-6 rounded-xl shadow-2xl border-t-8 border-adv-teal w-full">
+                <div class="sticky top-24 bg-white p-6 rounded-xl shadow-2xl border-t-8 border-adv-gold w-full">
                     <h3 class="text-xl font-extrabold text-gray-900 mb-4">Interested?</h3>
                     <a href="'.$applyLink.'" target="_blank" class="w-full block text-center bg-gray-900 hover:bg-gray-800 text-white font-bold py-3 rounded-lg shadow-md transition">Apply Now Online</a>
                 </div>
@@ -177,9 +177,9 @@ if (!empty($property)) {
             document.getElementById("main-property-image").src = url;
             currentImageIndex = index;
             const thumbs = document.querySelectorAll(".property-thumbnail");
-            thumbs.forEach(t => { t.classList.remove("border-adv-teal", "opacity-100", "scale-105"); t.classList.add("border-transparent", "opacity-60"); });
+            thumbs.forEach(t => { t.classList.remove("border-adv-gold", "opacity-100", "scale-105"); t.classList.add("border-transparent", "opacity-60"); });
             thumbElement.classList.remove("border-transparent", "opacity-60");
-            thumbElement.classList.add("border-adv-teal", "opacity-100", "scale-105");
+            thumbElement.classList.add("border-adv-gold", "opacity-100", "scale-105");
             thumbElement.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
         }
         function updateLightboxImage() { if (galleryImages.length > 0) { document.getElementById("lightbox-img").src = galleryImages[currentImageIndex]; document.getElementById("lightbox-counter").innerText = (currentImageIndex + 1) + " / " + galleryImages.length; } }

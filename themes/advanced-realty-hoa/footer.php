@@ -2,9 +2,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400 text-sm">
             <p>&copy; <?php echo date("Y"); ?> <?php echo get_hoa_var('hoa_name'); ?>. Managed Exclusively by <?php echo get_hoa_var('management_name'); ?>.</p>
             <p class="mt-2 text-gray-500">
-                <a href="<?php echo get_hoa_var('tos_url'); ?>" class="hover:text-adv-teal">Terms of Service</a> | 
-                <a href="<?php echo get_hoa_var('privacy_url'); ?>" class="hover:text-adv-teal">Privacy Policy</a> | 
-                <a href="<?php echo get_hoa_var('owner_portal_url'); ?>" target="_blank" class="hover:text-adv-teal">Member Login</a>
+                <a href="<?php echo get_hoa_var('tos_url'); ?>" class="hover:text-adv-gold">Terms of Service</a> | 
+                <a href="<?php echo get_hoa_var('privacy_url'); ?>" class="hover:text-adv-gold">Privacy Policy</a> | 
+                <a href="<?php echo get_hoa_var('owner_portal_url'); ?>" target="_blank" class="hover:text-adv-gold">Member Login</a>
             </p>
             
             <div class="flex justify-center mt-6 opacity-75">

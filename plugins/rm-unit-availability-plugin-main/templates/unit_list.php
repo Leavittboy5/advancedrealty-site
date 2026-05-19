@@ -9,7 +9,7 @@ foreach($unitList as $unit) {
 
     $rmBtns = "";
     if ((getBoolOptions($unit, 'unitListMojo'))) {
-        $rmBtns .= '<a target="_blank" class="w-full text-center block bg-adv-teal hover:bg-adv-teal-dark text-white font-bold py-2 rounded-lg transition duration-150 mb-2" href="https://showmojo.com/rentmanager/'.$coCode.'/location='.$location.'/'.$unit->unitID.'">Schedule a Showing</a>';
+        $rmBtns .= '<a target="_blank" class="w-full text-center block bg-adv-gold hover:bg-adv-gold-dark text-white font-bold py-2 rounded-lg transition duration-150 mb-2" href="https://showmojo.com/rentmanager/'.$coCode.'/location='.$location.'/'.$unit->unitID.'">Schedule a Showing</a>';
     }
     if ((getBoolOptions($unit, 'unitListApply'))) {
         $rmBtns .= '<a target="_blank" class="w-full text-center block bg-gray-900 hover:bg-gray-800 text-white font-bold py-2 rounded-lg transition duration-150 mb-2" href="https://'.$coCode.'.twa.rentmanager.com/ApplyNow?locations='.$location.'&unitID='.$unit->unitID.'">Apply Now</a>';
@@ -113,7 +113,7 @@ foreach($unitList as $unit) {
     $uid = !empty($unit->unitID) ? $unit->unitID : '';
     $csz = !empty($unit->csz) ? $unit->csz : '';
 
-    $autoHTML .= '<div class="rmwb_listing-wrapper property-card bg-white rounded-xl overflow-hidden shadow-lg border-t-4 border-adv-teal flex flex-col relative" data-show="no" data-availability="'.$availability.'" data-unittype="'.$unitType.'" data-rent="'.$rentValue.'" data-street="'.$street.'" data-uid="'.$uid.'" data-availabledate="'.$availDateObj.'" data-bathrooms="'.$baths.'" data-bedrooms="'.$beds.'">
+    $autoHTML .= '<div class="rmwb_listing-wrapper property-card bg-white rounded-xl overflow-hidden shadow-lg border-t-4 border-adv-gold flex flex-col relative" data-show="no" data-availability="'.$availability.'" data-unittype="'.$unitType.'" data-rent="'.$rentValue.'" data-street="'.$street.'" data-uid="'.$uid.'" data-availabledate="'.$availDateObj.'" data-bathrooms="'.$baths.'" data-bedrooms="'.$beds.'">
         
         '.$leftBadges.'
         
@@ -121,7 +121,7 @@ foreach($unitList as $unit) {
         
         <div class="p-8 flex-grow flex flex-col">
             <div class="flex justify-between items-center mb-2">
-                <p class="text-sm font-semibold text-adv-teal">Available: '.$dateAvailable.'</p>
+                <p class="text-sm font-semibold text-adv-gold">Available: '.$dateAvailable.'</p>
                 '.($unitNameRaw !== '' ? '<p class="text-sm font-bold text-gray-700 bg-gray-100 px-2 py-0.5 rounded">Unit: '.$unitNameRaw.'</p>' : '').'
             </div>
             
@@ -131,7 +131,7 @@ foreach($unitList as $unit) {
             <div class="flex flex-col border-t border-gray-100 pt-5">
                 <div class="flex justify-between items-baseline mb-5">
                     <span class="text-sm font-bold text-gray-700">Rent:</span>
-                    <span class="text-3xl text-adv-teal font-extrabold">'.$rent.'</span>
+                    <span class="text-3xl text-adv-gold font-extrabold">'.$rent.'</span>
                 </div>
             </div>
             

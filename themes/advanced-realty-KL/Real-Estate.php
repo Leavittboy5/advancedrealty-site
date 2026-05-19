@@ -30,7 +30,7 @@ get_header();
             St. George's Premier Real Estate Brokerage Team
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#idx-search" class="bg-adv-teal hover:bg-adv-teal-dark text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+            <a href="#idx-search" class="bg-adv-gold hover:bg-adv-gold-dark text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
                 Search Listings
             </a>
             <a href="#agents" class="bg-white hover:bg-gray-100 text-gray-900 font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
@@ -48,10 +48,10 @@ get_header();
                 <p class="text-gray-600 mt-2">Trusted advisors with deep roots in the Southern Utah community.</p>
             </div>
             <div class="hidden sm:flex space-x-2">
-                <button onclick="scrollCarousel(-1)" class="p-2 rounded-full border border-gray-300 hover:bg-adv-teal hover:text-white hover:border-adv-teal transition text-gray-500">
+                <button onclick="scrollCarousel(-1)" class="p-2 rounded-full border border-gray-300 hover:bg-adv-gold hover:text-white hover:border-adv-gold transition text-gray-500">
                     <i data-lucide="chevron-left" class="w-6 h-6"></i>
                 </button>
-                <button onclick="scrollCarousel(1)" class="p-2 rounded-full border border-gray-300 hover:bg-adv-teal hover:text-white hover:border-adv-teal transition text-gray-500">
+                <button onclick="scrollCarousel(1)" class="p-2 rounded-full border border-gray-300 hover:bg-adv-gold hover:text-white hover:border-adv-gold transition text-gray-500">
                     <i data-lucide="chevron-right" class="w-6 h-6"></i>
                 </button>
             </div>
@@ -91,21 +91,21 @@ get_header();
                             <img src="<?php echo esc_url($agent_photo); ?>" alt="<?php the_title(); ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         </div>
                         <div class="pt-6 px-6 pb-2 text-center">
-                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-adv-teal transition-colors"><?php the_title(); ?></h3>
-                            <p class="text-adv-teal font-semibold text-sm mt-1"><?php echo esc_html($agent_role ?: 'Realtor®'); ?></p>
+                            <h3 class="text-xl font-bold text-gray-900 group-hover:text-adv-gold transition-colors"><?php the_title(); ?></h3>
+                            <p class="text-adv-gold font-semibold text-sm mt-1"><?php echo esc_html($agent_role ?: 'Realtor®'); ?></p>
                         </div>
                     </a>
 
                     <div class="px-6 pb-6 text-center">
                         <div class="flex justify-center space-x-3 mt-4">
                             <?php if($agent_phone): ?>
-                                <a href="tel:<?php echo esc_attr($agent_phone); ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-teal hover:text-white transition" title="Call"><i data-lucide="phone" class="w-4 h-4"></i></a>
+                                <a href="tel:<?php echo esc_attr($agent_phone); ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-gold hover:text-white transition" title="Call"><i data-lucide="phone" class="w-4 h-4"></i></a>
                             <?php endif; ?>
                             <?php if($agent_email): ?>
-                                <a href="mailto:<?php echo esc_attr($agent_email); ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-teal hover:text-white transition" title="Email"><i data-lucide="mail" class="w-4 h-4"></i></a>
+                                <a href="mailto:<?php echo esc_attr($agent_email); ?>" class="p-2 bg-gray-100 rounded-full hover:bg-adv-gold hover:text-white transition" title="Email"><i data-lucide="mail" class="w-4 h-4"></i></a>
                             <?php endif; ?>
                         </div>
-                        <a href="<?php the_permalink(); ?>" class="inline-block mt-4 text-sm text-gray-500 hover:text-adv-teal font-medium">View Full Profile &rarr;</a>
+                        <a href="<?php the_permalink(); ?>" class="inline-block mt-4 text-sm text-gray-500 hover:text-adv-gold font-medium">View Full Profile &rarr;</a>
                     </div>
                 </div>
             <?php 
@@ -128,7 +128,7 @@ get_header();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-10">
             <h2 class="text-3xl font-extrabold text-gray-900">Current Listings</h2>
-            <div class="w-16 h-1 bg-adv-teal mx-auto mt-4 mb-4 rounded-full"></div>
+            <div class="w-16 h-1 bg-adv-gold mx-auto mt-4 mb-4 rounded-full"></div>
             <p class="text-sm text-gray-500">Listing data provided by FlexMLS. Information deemed reliable but not guaranteed.</p>
         </div>
 
@@ -155,11 +155,11 @@ get_header();
                         <div class="relative h-64 w-full overflow-hidden bg-gray-100">
                             <img src="<?php echo esc_url($image_url); ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="<?php the_title(); ?>">
                             
-                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-adv-teal shadow-sm">
+                            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-adv-gold shadow-sm">
                                 <?php echo esc_html($listing_status); ?>
                             </div>
                             
-                            <div class="absolute bottom-4 left-4 bg-adv-teal text-white px-4 py-2 rounded-xl font-bold shadow-lg">
+                            <div class="absolute bottom-4 left-4 bg-adv-gold text-white px-4 py-2 rounded-xl font-bold shadow-lg">
                                 <?php echo esc_html($price ?: 'Contact for Price'); ?>
                             </div>
                         </div>
@@ -198,13 +198,13 @@ get_header();
                                 <div class="text-center">
                                     <p class="text-[10px] text-gray-400 uppercase font-bold mb-1">Beds</p>
                                     <p class="text-gray-900 font-bold flex items-center justify-center gap-1">
-                                        <i data-lucide="bed" class="w-3 h-3 text-adv-teal"></i> <?php echo $bedrooms ?: '-'; ?>
+                                        <i data-lucide="bed" class="w-3 h-3 text-adv-gold"></i> <?php echo $bedrooms ?: '-'; ?>
                                     </p>
                                 </div>
                                 <div class="text-center border-x border-gray-100">
                                     <p class="text-[10px] text-gray-400 uppercase font-bold mb-1">Baths</p>
                                     <p class="text-gray-900 font-bold flex items-center justify-center gap-1">
-                                        <i data-lucide="bath" class="w-3 h-3 text-adv-teal"></i> <?php echo $bathrooms ?: '-'; ?>
+                                        <i data-lucide="bath" class="w-3 h-3 text-adv-gold"></i> <?php echo $bathrooms ?: '-'; ?>
                                     </p>
                                 </div>
                                 <div class="text-center">
@@ -215,7 +215,7 @@ get_header();
                                 </div>
                             </div>
                             
-                            <a href="<?php echo esc_url($mls_link ?: 'https://my.flexmls.com/advancedrealty'); ?>" target="_blank" class="block w-full text-center bg-gray-900 hover:bg-adv-teal text-white font-bold py-3 rounded-xl transition-colors duration-300">
+                            <a href="<?php echo esc_url($mls_link ?: 'https://my.flexmls.com/advancedrealty'); ?>" target="_blank" class="block w-full text-center bg-gray-900 hover:bg-adv-gold text-white font-bold py-3 rounded-xl transition-colors duration-300">
                                 View Full MLS Details
                             </a>
                         </div>
@@ -234,7 +234,7 @@ get_header();
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="bg-adv-teal rounded-2xl p-10 text-center text-white shadow-xl flex flex-col justify-center items-center transform transition duration-300 hover:-translate-y-2">
+            <div class="bg-adv-gold rounded-2xl p-10 text-center text-white shadow-xl flex flex-col justify-center items-center transform transition duration-300 hover:-translate-y-2">
                 <div class="bg-white/20 p-4 rounded-full mb-6">
                     <i data-lucide="home" class="w-8 h-8 text-white"></i>
                 </div>
@@ -242,20 +242,20 @@ get_header();
                 <p class="text-lg text-teal-50 mb-8 max-w-sm">
                     Our strategic marketing plans and local expertise ensure you get the best value for your property.
                 </p>
-                <a href="#agents" class="bg-white text-adv-teal hover:bg-gray-100 font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                <a href="#agents" class="bg-white text-adv-gold hover:bg-gray-100 font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
                     Contact an Agent
                 </a>
             </div>
 
             <div class="bg-gray-800 rounded-2xl p-10 text-center text-white shadow-xl flex flex-col justify-center items-center transform transition duration-300 hover:-translate-y-2">
                 <div class="bg-gray-700 p-4 rounded-full mb-6">
-                    <i data-lucide="key" class="w-8 h-8 text-adv-teal"></i>
+                    <i data-lucide="key" class="w-8 h-8 text-adv-gold"></i>
                 </div>
                 <h2 class="text-3xl font-extrabold mb-4">Property Management</h2>
                 <p class="text-lg text-gray-300 mb-8 max-w-sm">
                     Stop worrying about tenants and maintenance. We protect your investment and maximize returns.
                 </p>
-                <a href="https://advancedrealty.com/residential-management/" class="bg-adv-teal hover:bg-adv-teal-dark text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
+                <a href="https://advancedrealty.com/residential-management/" class="bg-adv-gold hover:bg-adv-gold-dark text-white font-bold py-3 px-8 rounded-xl shadow-lg transition duration-300 transform hover:scale-105">
                     Get Management Quote
                 </a>
             </div>

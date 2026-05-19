@@ -23,7 +23,7 @@ get_header();
             </div>
 
             <div class="lg:w-1/2">
-                <h4 class="text-adv-teal font-bold uppercase tracking-wider mb-2">Our Story</h4>
+                <h4 class="text-adv-gold font-bold uppercase tracking-wider mb-2">Our Story</h4>
                 <h2 class="text-4xl font-extrabold text-gray-900 mb-6">About Advanced Realty: Your St. George Real Estate Experts</h2>
                 <div class="prose prose-lg text-gray-600 space-y-4">
                     <?php 
@@ -73,10 +73,10 @@ get_header();
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             <div class="space-y-6">
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-adv-teal">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-adv-gold">
                     <div class="flex items-center mb-4">
                         <div class="bg-teal-50 p-3 rounded-full mr-4">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-adv-teal"></i>
+                            <i data-lucide="map-pin" class="w-6 h-6 text-adv-gold"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Visit Our Office</h3>
                     </div>
@@ -84,32 +84,32 @@ get_header();
                         1156 E 700 S Ste. 1<br>
                         St. George, UT 84790
                     </p>
-                    <a href="https://maps.app.goo.gl/22ZEV9jXHa3HFLQY8" target="_blank" class="text-adv-teal font-semibold text-sm mt-2 inline-block hover:underline">Get Directions →</a>
+                    <a href="https://maps.app.goo.gl/22ZEV9jXHa3HFLQY8" target="_blank" class="text-adv-gold font-semibold text-sm mt-2 inline-block hover:underline">Get Directions →</a>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-adv-teal">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-adv-gold">
                     <div class="flex items-center mb-4">
                         <div class="bg-teal-50 p-3 rounded-full mr-4">
-                            <i data-lucide="phone" class="w-6 h-6 text-adv-teal"></i>
+                            <i data-lucide="phone" class="w-6 h-6 text-adv-gold"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Call Us</h3>
                     </div>
                     <p class="text-gray-600 mb-1">
                         <strong class="text-gray-800">Main:</strong> 
-                        <a href="tel:4356744343" class="hover:text-adv-teal transition duration-150">(435) 674-4343</a>
+                        <a href="tel:4356744343" class="hover:text-adv-gold transition duration-150">(435) 674-4343</a>
                     </p>
                     <p class="text-xs text-gray-400 mt-2">Mon-Fri: 9:00am - 5:00pm</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-adv-teal">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-adv-gold">
                     <div class="flex items-center mb-4">
                         <div class="bg-teal-50 p-3 rounded-full mr-4">
-                            <i data-lucide="mail" class="w-6 h-6 text-adv-teal"></i>
+                            <i data-lucide="mail" class="w-6 h-6 text-adv-gold"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Email Us</h3>
                     </div>
                     <p class="text-gray-600 mb-2">General Inquiries:</p>
-                    <a href="mailto:info@advancedrealty.com" class="text-lg font-bold text-adv-teal hover:underline">info@advancedrealty.com</a>
+                    <a href="mailto:info@advancedrealty.com" class="text-lg font-bold text-adv-gold hover:underline">info@advancedrealty.com</a>
                 </div>
             </div>
 
