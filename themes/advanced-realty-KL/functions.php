@@ -14,7 +14,9 @@ function advanced_realty_child_scripts() {
             extend: {
                 colors: {
                     'adv-teal': '#366366',
-                    'adv-teal-dark': '#2b4f51'
+                    'adv-teal-dark': '#2b4f51',
+                    'adv-gold': '#d4af37',
+                    'adv-gold-dark': '#b5952f'
                 }
             }
         }
