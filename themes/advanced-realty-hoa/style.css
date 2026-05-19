@@ -13,10 +13,15 @@ body {
 }
 
 /* Custom Brand Color (Teal from Advanced Realty Logo) */
-.text-adv-teal { color: #366366; } 
+.text-adv-teal { color: #366366; }
 .bg-adv-teal { background-color: #366366; }
 .border-adv-teal { border-color: #366366; }
 .hover\:bg-adv-teal-dark:hover { background-color: #2b4f51; }
+
+.text-adv-gold { color: #d4af37; }
+.bg-adv-gold { background-color: #d4af37; }
+.border-adv-gold { border-color: #d4af37; }
+.hover\:bg-adv-gold-dark:hover { background-color: #b5952f; }
 
 /* HOA Primary Accent Color: Royal Blue */
 .text-hoa-blue { color: #1D4ED8; } 

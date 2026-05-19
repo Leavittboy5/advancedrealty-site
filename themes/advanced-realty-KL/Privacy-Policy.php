@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <main class="flex-grow py-12">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 rounded-xl shadow-2xl border-t-8 border-adv-teal">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 rounded-xl shadow-2xl border-t-8 border-adv-gold">
 
         <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">Privacy Policy</h1>
         <p class="text-lg text-gray-500 mb-8 border-b pb-4">
@@ -64,7 +64,7 @@ get_header();
             <h2 id="contact" class="text-2xl font-bold text-gray-900 mt-8 mb-4">10. Contact Information</h2>
             <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
             <p class="font-semibold mt-4">Trent W. Leavitt P.C., dba Advanced Realty</p>
-            <p>Email: <a href="mailto:info@advancedrealty.com" class="text-adv-teal hover:underline font-medium">info@advancedrealty.com</a></p>
+            <p>Email: <a href="mailto:info@advancedrealty.com" class="text-adv-gold hover:underline font-medium">info@advancedrealty.com</a></p>
             <p>Phone: (435) 674-4343</p>
             <p>Address: 1156 E 700 S Ste. 1, St. George, UT 84790</p>
             

@@ -20,18 +20,18 @@ get_header();
 <section class="py-12 -mt-16 relative z-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="http://residentwebaccess.rentmanager.com/CustomerLogin.aspx?corpid=advr" target="_blank" class="bg-white p-8 rounded-xl shadow-xl border-t-8 border-adv-teal hover:transform hover:-translate-y-2 transition duration-300 group flex flex-col justify-between">
+            <a href="http://residentwebaccess.rentmanager.com/CustomerLogin.aspx?corpid=advr" target="_blank" class="bg-white p-8 rounded-xl shadow-xl border-t-8 border-adv-gold hover:transform hover:-translate-y-2 transition duration-300 group flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-2xl font-bold text-gray-900 group-hover:text-adv-teal">Resident Portal</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 group-hover:text-adv-gold">Resident Portal</h3>
                         <div class="flex space-x-2">
-                            <div class="bg-teal-50 p-2 rounded-full"><i data-lucide="credit-card" class="w-6 h-6 text-adv-teal"></i></div>
-                            <div class="bg-teal-50 p-2 rounded-full"><i data-lucide="wrench" class="w-6 h-6 text-adv-teal"></i></div>
+                            <div class="bg-teal-50 p-2 rounded-full"><i data-lucide="credit-card" class="w-6 h-6 text-adv-gold"></i></div>
+                            <div class="bg-teal-50 p-2 rounded-full"><i data-lucide="wrench" class="w-6 h-6 text-adv-gold"></i></div>
                         </div>
                     </div>
                     <p class="text-gray-600 mb-4">Log in to your secure account to pay rent, set up auto-pay, or submit maintenance requests.</p>
                 </div>
-                <span class="text-adv-teal font-bold text-lg flex items-center mt-2 group-hover:text-adv-teal-dark">Access Portal <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i></span>
+                <span class="text-adv-gold font-bold text-lg flex items-center mt-2 group-hover:text-adv-gold-dark">Access Portal <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i></span>
             </a>
 
             <a href="https://services.commerce.utah.gov/hoa/" target="_blank" class="bg-white p-8 rounded-xl shadow-xl border-t-8 border-blue-600 hover:transform hover:-translate-y-2 transition duration-300 group flex flex-col justify-between">
@@ -66,107 +66,107 @@ get_header();
             <div class="lg:col-span-2 space-y-10">
                 
                 <div class="bg-white rounded-xl shadow-md p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i data-lucide="zap" class="w-6 h-6 mr-3 text-adv-teal"></i> Utility Provider Contacts</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i data-lucide="zap" class="w-6 h-6 mr-3 text-adv-gold"></i> Utility Provider Contacts</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">City of St. George</h4>
                             <p class="text-sm text-gray-500 mb-3">Power & Water</p>
                             <div class="space-y-2">
-                                <a href="tel:4356274000" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 627-4000</a>
-                                <a href="https://sgcityutah.gov/departments/utilities.php" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356274000" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 627-4000</a>
+                                <a href="https://sgcityutah.gov/departments/utilities.php" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">Dixie Power</h4>
                             <p class="text-sm text-gray-500 mb-3">Electricity (County)</p>
                             <div class="space-y-2">
-                                <a href="tel:4356733297" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 673-3297</a>
-                                <a href="https://www.dixiepower.com/" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356733297" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 673-3297</a>
+                                <a href="https://www.dixiepower.com/" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">Enbridge Gas</h4>
                             <p class="text-sm text-gray-500 mb-3">Natural Gas</p>
                             <div class="space-y-2">
-                                <a href="tel:8003235517" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (800) 323-5517</a>
-                                <a href="https://www.enbridgegas.com/utwyid" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:8003235517" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (800) 323-5517</a>
+                                <a href="https://www.enbridgegas.com/utwyid" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">WashCo Solid Waste</h4>
                             <p class="text-sm text-gray-500 mb-3">Trash / Recycling</p>
                             <div class="space-y-2">
-                                <a href="tel:4356282821" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 628-2821</a>
-                                <a href="https://www.washcosolidwasteut.gov/" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356282821" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 628-2821</a>
+                                <a href="https://www.washcosolidwasteut.gov/" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i data-lucide="map-pin" class="w-6 h-6 mr-3 text-adv-teal"></i> Surrounding City Utilities</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i data-lucide="map-pin" class="w-6 h-6 mr-3 text-adv-gold"></i> Surrounding City Utilities</h2>
                     <p class="text-gray-600 mb-6">If your rental property is located outside of St. George proper, you will need to set up your city utility services directly with your municipality prior to move-in.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">Hurricane City</h4>
                             <p class="text-sm text-gray-500 mb-3">Power, Water, Trash</p>
                             <div class="space-y-2">
-                                <a href="tel:4356352811" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 635-2811</a>
-                                <a href="https://www.cityofhurricane.com/219/Utility-Billing" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356352811" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 635-2811</a>
+                                <a href="https://www.cityofhurricane.com/219/Utility-Billing" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">Ivins City</h4>
                             <p class="text-sm text-gray-500 mb-3">Water, Sewer, Trash</p>
                             <div class="space-y-2">
-                                <a href="tel:4356280606" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 628-0606</a>
-                                <a href="https://www.ivins.com/utilities/" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356280606" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 628-0606</a>
+                                <a href="https://www.ivins.com/utilities/" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">Santa Clara City</h4>
                             <p class="text-sm text-gray-500 mb-3">Power, Water, Trash</p>
                             <div class="space-y-2">
-                                <a href="tel:4356736712" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 673-6712</a>
-                                <a href="https://sccity.org/utilities" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356736712" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 673-6712</a>
+                                <a href="https://sccity.org/utilities" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">Washington City</h4>
                             <p class="text-sm text-gray-500 mb-3">Power, Water, Trash</p>
                             <div class="space-y-2">
-                                <a href="tel:4356566300" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 656-6300</a>
-                                <a href="https://washingtoncity.org/utilities" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356566300" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 656-6300</a>
+                                <a href="https://washingtoncity.org/utilities" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i data-lucide="wifi" class="w-6 h-6 mr-3 text-adv-teal"></i> Internet Service Providers (ISPs)</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4 flex items-center"><i data-lucide="wifi" class="w-6 h-6 mr-3 text-adv-gold"></i> Internet Service Providers (ISPs)</h2>
                     <p class="text-gray-600 mb-6">Internet service is typically set up and paid for directly by the tenant. Availability varies by neighborhood, so please check with the providers below to see who services your new address.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">InfoWest</h4>
                             <p class="text-sm text-gray-500 mb-3">Fiber & Wireless</p>
                             <div class="space-y-2">
-                                <a href="tel:4356740165" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 674-0165</a>
-                                <a href="https://www.infowest.com/" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:4356740165" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 674-0165</a>
+                                <a href="https://www.infowest.com/" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                         <div class="border p-4 rounded-lg bg-gray-50">
                             <h4 class="font-bold text-gray-800">TDS Telecom</h4>
                             <p class="text-sm text-gray-500 mb-3">Cable & Fiber</p>
                             <div class="space-y-2">
-                                <a href="tel:7026134870" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> Darren Sieben: (702) 613-4870</a>
-                                <a href="https://tdstelecom.com/" target="_blank" class="text-gray-700 hover:text-adv-teal text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-teal"></i> Visit Website</a>
+                                <a href="tel:7026134870" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> Darren Sieben: (702) 613-4870</a>
+                                <a href="https://tdstelecom.com/" target="_blank" class="text-gray-700 hover:text-adv-gold text-sm font-medium flex items-center transition"><i data-lucide="external-link" class="w-4 h-4 mr-2 text-adv-gold"></i> Visit Website</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white rounded-xl shadow-md p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i data-lucide="help-circle" class="w-6 h-6 mr-3 text-adv-teal"></i> Frequently Asked Questions</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center"><i data-lucide="help-circle" class="w-6 h-6 mr-3 text-adv-gold"></i> Frequently Asked Questions</h2>
                     <div class="space-y-4">
                         <details class="group p-4 border rounded-lg bg-gray-50 open:bg-white open:shadow-sm">
                             <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-gray-800">
@@ -207,8 +207,8 @@ get_header();
                             $target = !empty($menu_item->target) ? ' target="' . esc_attr($menu_item->target) . '"' : ' target="_blank"';
                             
                             echo '<li>
-                                    <a href="' . $url . '"' . $target . ' class="flex items-center p-3 rounded-lg hover:bg-teal-50 text-gray-700 hover:text-adv-teal transition group">
-                                        <i data-lucide="file-text" class="w-5 h-5 mr-3 text-gray-400 group-hover:text-adv-teal"></i>
+                                    <a href="' . $url . '"' . $target . ' class="flex items-center p-3 rounded-lg hover:bg-teal-50 text-gray-700 hover:text-adv-gold transition group">
+                                        <i data-lucide="file-text" class="w-5 h-5 mr-3 text-gray-400 group-hover:text-adv-gold"></i>
                                         <span class="font-medium">' . $title . '</span>
                                     </a>
                                   </li>';
@@ -227,14 +227,14 @@ get_header();
                         
                         <div class="space-y-3 mb-6">
                             <p class="text-sm font-bold text-gray-900">Advanced Realty</p>
-                            <a href="tel:4356744343" class="text-sm text-gray-700 hover:text-adv-teal flex items-center transition">
-                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-teal"></i> (435) 674-4343
+                            <a href="tel:4356744343" class="text-sm text-gray-700 hover:text-adv-gold flex items-center transition">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-adv-gold"></i> (435) 674-4343
                             </a>
-                            <a href="mailto:info@advancedrealty.com" class="text-sm text-gray-700 hover:text-adv-teal flex items-center transition">
-                                <i data-lucide="mail" class="w-4 h-4 mr-2 text-adv-teal"></i> info@advancedrealty.com
+                            <a href="mailto:info@advancedrealty.com" class="text-sm text-gray-700 hover:text-adv-gold flex items-center transition">
+                                <i data-lucide="mail" class="w-4 h-4 mr-2 text-adv-gold"></i> info@advancedrealty.com
                             </a>
                             <p class="text-xs text-gray-600 flex items-start">
-                                <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 text-adv-teal flex-shrink-0"></i>
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1 text-adv-gold flex-shrink-0"></i>
                                 <span>1156 E 700 S Ste. 1<br>St. George, UT 84790</span>
                             </p>
                         </div>

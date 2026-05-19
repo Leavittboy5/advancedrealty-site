@@ -22,6 +22,12 @@ body {
 .border-adv-teal { border-color: #366366; }
 .hover\:bg-adv-teal-dark:hover { background-color: #2b4f51; }
 
+/* Gold Colors */
+.text-adv-gold { color: #d4af37; }
+.bg-adv-gold { background-color: #d4af37; }
+.border-adv-gold { border-color: #d4af37; }
+.hover\:bg-adv-gold-dark:hover { background-color: #b5952f; }
+
 /* Navigation Dropdowns */
 .dropdown-menu { 
     transition: opacity 0.2s ease, transform 0.2s ease; 

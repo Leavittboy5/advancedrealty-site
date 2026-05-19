@@ -35,7 +35,7 @@ get_header();
             <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Why Choose Advanced Realty?</h2>
             <div class="space-y-6">
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="award" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="award" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">30+ Years of Local Expertise</h3>
                         <p class="text-gray-600 mt-1">As a locally owned and operated firm in St. George, we understand the Southern Utah market better than anyone else.</p>
@@ -43,7 +43,7 @@ get_header();
                 </div>
 
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="users" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="users" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">Rigorous Tenant Screening</h3>
                         <p class="text-gray-600 mt-1">We perform criminal, credit, and eviction checks to ensure high-quality residents for your investment.</p>
@@ -51,7 +51,7 @@ get_header();
                 </div>
                 
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="wrench" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="wrench" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">24/7 Maintenance Coordination</h3>
                         <p class="text-gray-600 mt-1">We handle emergencies and coordinate repairs with trusted local vendors to protect your asset.</p>
@@ -59,14 +59,14 @@ get_header();
                 </div>
 
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="bar-chart-3" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="bar-chart-3" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">Transparent Accounting</h3>
                         <p class="text-gray-600 mt-1">Maximize your ROI with detailed financial reports available anytime via our secure Owner Portal.</p>
                     </div>
                 </div>
 
-                <div class="adv-promo-banner bg-adv-teal rounded-2xl overflow-hidden shadow-xl my-12 flex flex-col md:flex-row items-center">
+                <div class="adv-promo-banner bg-adv-gold rounded-2xl overflow-hidden shadow-xl my-12 flex flex-col md:flex-row items-center">
                     <div class="p-8 md:p-12 flex-grow">
                         <span class="text-white opacity-80 font-bold uppercase tracking-widest text-sm">Looking to Buy or Sell?</span>
                         <h3 class="text-3xl md:text-4xl font-extrabold text-white mt-2 mb-4">Full-Service Real Estate Brokerage</h3>

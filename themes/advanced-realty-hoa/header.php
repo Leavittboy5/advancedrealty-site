@@ -26,7 +26,7 @@
                  <img src="https://advancedrealty.com/wp-content/uploads/2026/05/Logo-3at-small.png" 
                       onerror="this.style.display='none'; document.getElementById('logo-text-fallback-hoa').classList.remove('hidden');"
                       alt="Management Logo" class="h-12 opacity-80 group-hover:opacity-100 transition duration-150">
-                <span id="logo-text-fallback-hoa" class="text-xl font-extrabold text-adv-teal hidden"><?php echo strtoupper(get_hoa_var('management_name')); ?></span>
+                <span id="logo-text-fallback-hoa" class="text-xl font-extrabold text-adv-gold hidden"><?php echo strtoupper(get_hoa_var('management_name')); ?></span>
             </a>
         </div>
     </header>

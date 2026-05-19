@@ -35,38 +35,38 @@ get_header();
             
             <div class="space-y-6">
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="briefcase" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="briefcase" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">Lease Administration</h3>
                         <p class="text-gray-600 mt-1">We handle complex lease negotiations, renewals, and escalations to maximize occupancy.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="pie-chart" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="pie-chart" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">CAM Reconciliation</h3>
                         <p class="text-gray-600 mt-1">Accurate calculation and billing of Common Area Maintenance charges to tenants.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
-                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="building" class="w-6 h-6 text-adv-teal"></i></div>
+                    <div class="flex-shrink-0 p-3 bg-teal-50 rounded-lg"><i data-lucide="building" class="w-6 h-6 text-adv-gold"></i></div>
                     <div class="ml-4">
                         <h3 class="text-xl font-bold text-gray-900">Facilities Management</h3>
                         <p class="text-gray-600 mt-1">Proactive maintenance of building systems, landscaping, and safety compliance.</p>
                     </div>
                 </div>
                 
-                <div class="adv-promo-banner bg-slate-800 rounded-2xl overflow-hidden shadow-xl my-12 flex flex-col md:flex-row items-center border-b-8 border-adv-teal">
+                <div class="adv-promo-banner bg-slate-800 rounded-2xl overflow-hidden shadow-xl my-12 flex flex-col md:flex-row items-center border-b-8 border-adv-gold">
                     <div class="p-8 md:p-12 flex-grow">
-                        <span class="text-adv-teal font-bold uppercase tracking-widest text-sm">Strategic Asset Disposition</span>
+                        <span class="text-adv-gold font-bold uppercase tracking-widest text-sm">Strategic Asset Disposition</span>
                         <h3 class="text-3xl md:text-4xl font-extrabold text-white mt-2 mb-4">Commercial Sales & Acquisition</h3>
                         <p class="text-gray-300 text-lg max-w-xl">Ready to exit or trade? We specialize in commercial asset management and brokerage, ensuring you get maximum value for your commercial property.</p>
                         <div class="mt-8">
-                            <a href="/real-estate" class="inline-block bg-adv-teal hover:bg-white hover:text-adv-teal text-white font-bold py-4 px-8 rounded-lg transition duration-300 shadow-lg">Talk to a Commercial Agent</a>
+                            <a href="/real-estate" class="inline-block bg-adv-gold hover:bg-white hover:text-adv-gold text-white font-bold py-4 px-8 rounded-lg transition duration-300 shadow-lg">Talk to a Commercial Agent</a>
                         </div>
                     </div>
-                    <div class="hidden lg:block w-1/3 bg-adv-teal/5 p-12 text-center">
-                        <svg class="w-32 h-32 text-adv-teal mx-auto opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <div class="hidden lg:block w-1/3 bg-adv-gold/5 p-12 text-center">
+                        <svg class="w-32 h-32 text-adv-gold mx-auto opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
                 </div>
             </div>

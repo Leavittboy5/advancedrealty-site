@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <main class="flex-grow py-12 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 rounded-xl shadow-2xl border-t-8 border-adv-teal">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 rounded-xl shadow-2xl border-t-8 border-adv-gold">
 
         <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-2">Website Terms and Conditions of Use</h1>
         <p class="text-lg text-gray-500 mb-8 border-b pb-4">
@@ -17,7 +17,7 @@ get_header();
             <p>Welcome to the Advanced Realty website. The terms "Advanced Realty," "we," "us," and "our" refer to <strong>Trent W. Leavitt P.C., dba Advanced Realty</strong>, a licensed real estate and property management entity operating in St. George, Utah. By accessing or using this website, you agree to comply with and be bound by the following Terms and Conditions.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Acceptance of Terms</h2>
-            <p>By using this website, you agree that you have read, understood, and agree to these Terms and Conditions, our <a href="https://advancedrealty.com/privacy-policy" class="text-adv-teal hover:underline font-medium">Privacy Policy</a>, and all applicable laws and regulations. If you do not agree to these terms, you must not use this website.</p>
+            <p>By using this website, you agree that you have read, understood, and agree to these Terms and Conditions, our <a href="https://advancedrealty.com/privacy-policy" class="text-adv-gold hover:underline font-medium">Privacy Policy</a>, and all applicable laws and regulations. If you do not agree to these terms, you must not use this website.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Scope of Services & Information Disclaimer</h2>
             <p>This website serves as an informational portal for our various services (Real Estate, Residential Rentals, HOA Management, Commercial Management, and Storage Services). Information provided on this site does not constitute legally binding advice or a finalized agreement unless expressly stated in a signed contract.</p>
@@ -30,7 +30,7 @@ get_header();
                 <li><strong>Message Frequency:</strong> <strong>Message frequency varies.</strong></li>
                 <li><strong>Pricing:</strong> <strong>Message and data rates may apply.</strong> Please consult your wireless carrier for details on your plan.</li>
                 <li><strong>Opt-Out:</strong> You may opt-out of receiving text messages at any time. <strong>Reply STOP to cancel.</strong> After you send the SMS message STOP to us, we will send you an SMS message to confirm that you have been unsubscribed. If you wish to rejoin, you can sign up again through our portal or by contacting our office.</li>
-                <li><strong>Help:</strong> <strong>Reply HELP for help.</strong> If you are experiencing issues, you can get help directly at <a href="mailto:info@advancedrealty.com" class="text-adv-teal hover:underline">info@advancedrealty.com</a> or by calling (435) 674-4343.</li>
+                <li><strong>Help:</strong> <strong>Reply HELP for help.</strong> If you are experiencing issues, you can get help directly at <a href="mailto:info@advancedrealty.com" class="text-adv-gold hover:underline">info@advancedrealty.com</a> or by calling (435) 674-4343.</li>
                 <li><strong>Carrier Liability:</strong> <strong>Carriers are not liable for delayed or undelivered messages.</strong></li>
             </ul>
 
@@ -62,7 +62,7 @@ get_header();
             <p>If you have any questions regarding these Terms and Conditions, please contact our St. George office:</p>
             <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
                 <p class="font-bold text-gray-900">Trent W. Leavitt P.C., dba Advanced Realty</p>
-                <p><strong>Email:</strong> <a href="mailto:info@advancedrealty.com" class="text-adv-teal hover:underline font-medium">info@advancedrealty.com</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@advancedrealty.com" class="text-adv-gold hover:underline font-medium">info@advancedrealty.com</a></p>
                 <p><strong>Phone:</strong> (435) 674-4343</p>
                 <p><strong>Address:</strong> 1156 E 700 S Ste. 1, St. George, UT 84790</p>
             </div>

@@ -16,7 +16,7 @@
             <img src="https://advancedrealty.com/wp-content/uploads/2026/05/Logo-3at-small.png" 
                  onerror="this.style.display='none'; document.getElementById('logo-text-fallback').classList.remove('hidden');"
                  alt="Advanced Realty Logo" class="h-16 w-auto">
-            <span id="logo-text-fallback" class="text-3xl font-extrabold text-adv-teal hidden">ADVANCED REALTY</span>
+            <span id="logo-text-fallback" class="text-3xl font-extrabold text-adv-gold hidden">ADVANCED REALTY</span>
         </a>
         
         <nav class="hidden md:flex space-x-4 items-center h-full">

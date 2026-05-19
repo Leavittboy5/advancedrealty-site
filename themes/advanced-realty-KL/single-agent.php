@@ -44,20 +44,20 @@ get_header(); ?>
                 <div class="flex-grow text-center md:text-left pt-2">
                     <h1 class="text-4xl font-extrabold text-gray-900 mb-2"><?php the_title(); ?></h1>
                     
-                    <p class="text-adv-teal font-bold text-xl mb-8 uppercase tracking-wide">
+                    <p class="text-adv-gold font-bold text-xl mb-8 uppercase tracking-wide">
                         <?php echo esc_html($agent_role ?: 'Realtor®'); ?>
                     </p>
 
                     <div class="flex flex-wrap justify-center md:justify-start gap-4">
                         <?php if( $agent_phone ): ?>
-                            <a href="tel:<?php echo esc_attr($clean_phone); ?>" class="flex items-center gap-2 bg-gray-900 hover:bg-adv-teal text-white font-bold py-3 px-6 rounded-xl transition duration-300 shadow-sm">
+                            <a href="tel:<?php echo esc_attr($clean_phone); ?>" class="flex items-center gap-2 bg-gray-900 hover:bg-adv-gold text-white font-bold py-3 px-6 rounded-xl transition duration-300 shadow-sm">
                                 <i data-lucide="phone" class="w-5 h-5"></i>
                                 <?php echo esc_html($formatted_phone); ?>
                             </a>
                         <?php endif; ?>
                         
                         <?php if( $agent_email ): ?>
-                            <a href="mailto:<?php echo esc_attr($agent_email); ?>" class="flex items-center gap-2 bg-adv-teal hover:bg-adv-teal-dark text-white font-bold py-3 px-6 rounded-xl transition duration-300 shadow-sm">
+                            <a href="mailto:<?php echo esc_attr($agent_email); ?>" class="flex items-center gap-2 bg-adv-gold hover:bg-adv-gold-dark text-white font-bold py-3 px-6 rounded-xl transition duration-300 shadow-sm">
                                 <i data-lucide="mail" class="w-5 h-5"></i>
                                 Email <?php $first_name = explode(' ', get_the_title())[0]; echo esc_html($first_name); ?>
                             </a>

@@ -166,8 +166,8 @@ get_header();
 <!-- The Six Pillars Section -->
 <section id="service-hub" class="py-16 bg-f7fbfd">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-sm font-bold tracking-wider text-adv-gold uppercase text-center mb-2">Our Expertise</h2>
-            <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">
+        <h2 class="text-sm font-bold tracking-wider text-adv-gold uppercase text-center mb-2">Our Expertise</h2>
+        <h2 class="text-4xl font-extrabold text-gray-900 text-center mb-4">
             Advanced Realty's Six Pillars
         </h2>
         <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
