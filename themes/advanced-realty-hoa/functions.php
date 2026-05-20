@@ -14,6 +14,46 @@ function advanced_realty_hoa_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'advanced_realty_hoa_scripts' );
 
+// 1.5 Inject Tailwind Configuration into the <head>
+function advanced_realty_tailwind_config() {
+    ?>
+    <script>
+        tailwind.config = { 
+            corePlugins: { preflight: true },
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'adv-teal': '#366366',
+                        'adv-teal-dark': '#2b4f51',
+                        'adv-gold': '#d4af37',
+                        'adv-gold-dark': '#b5952f',
+                        'adv-bg': '#f7fbfd'
+                    }
+                }
+            }
+        };
+    </script>
+    <?php
+}
+add_action('wp_head', 'advanced_realty_tailwind_config', 20);
+
+// 1.6 Auto-Initialize Lucide Icons in the Footer
+function advanced_realty_initialize_icons() {
+    ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'advanced_realty_initialize_icons', 20);
+
 // 2. Set up the WordPress Customizer (Appearance -> Customize)
 function hoa_theme_customize_register( $wp_customize ) {
     
@@ -56,7 +96,6 @@ function hoa_theme_customize_register( $wp_customize ) {
     $add_setting('privacy_url', 'Privacy Policy URL', '#', 'url');
 }
 add_action( 'customize_register', 'hoa_theme_customize_register' );
-
 
 // 3. Helper Function to grab these variables anywhere in our theme
 function get_hoa_var($key) {

@@ -3,7 +3,7 @@ Theme Name: Advanced Realty HOA Template
 Theme URI: https://advancedrealty.com
 Author: Advanced Realty
 Description: Standardized layout for properties managed by Advanced Realty. Includes customizer support for HOA specific details.
-Version: 1.1
+Version: 1.2
 */
 
 body {
@@ -13,16 +13,22 @@ body {
 }
 
 /* Custom Brand Color (Teal from Advanced Realty Logo) */
-.text-adv-teal { color: #d4af37; } 
-.bg-adv-teal { background-color: #d4af37; }
-.border-adv-teal { border-color: #d4af37; }
-.hover\:bg-adv-teal-dark:hover { background-color: #b5952f; }
+.text-adv-teal { color: #366366; } 
+.bg-adv-teal { background-color: #366366; }
+.border-adv-teal { border-color: #366366; }
+.hover\:bg-adv-teal-dark:hover { background-color: #2b4f51; }
 
-/* HOA Primary Accent Color: Royal Blue */
-.text-hoa-blue { color: #1D4ED8; } 
-.bg-hoa-blue { background-color: #1D4ED8; } 
-.hover\:bg-hoa-blue-dark:hover { background-color: #1E40AF; } 
+/* Custom Brand Color (Gold Accent) */
+.text-adv-gold { color: #d4af37; } 
+.bg-adv-gold { background-color: #d4af37; }
+.border-adv-gold { border-color: #d4af37; }
+.hover\:bg-adv-gold-dark:hover { background-color: #b5952f; }
 
-/* HOA Secondary Accent Color: Amber/Orange */
-.bg-hoa-amber { background-color: #F59E0B; } 
-.text-hoa-amber { color: #F59E0B; }
+/* Legacy HOA Classes (Re-mapped to Teal/Gold to prevent broken styles on older pages) */
+.text-hoa-blue { color: #366366; } 
+.bg-hoa-blue { background-color: #366366; } 
+.hover\:bg-hoa-blue-dark:hover { background-color: #2b4f51; } 
+
+.text-hoa-amber { color: #d4af37; } 
+.bg-hoa-amber { background-color: #d4af37; } 
+.hover\:bg-hoa-amber-dark:hover { background-color: #b5952f; }

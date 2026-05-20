@@ -1,66 +1,84 @@
-<footer class="bg-gray-800 text-white py-12 mt-auto flex-shrink-0 border-t-4 border-adv-gold">
+<footer class="bg-gray-900 text-gray-300 py-16 mt-auto border-t-4 border-adv-gold">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             
-            <div class="col-span-2 md:col-span-1">
-                <h4 class="text-lg font-bold mb-4 text-adv-gold">Advanced Realty</h4>
-                <p class="text-sm text-gray-400">
-                    Full-service property management and real estate brokerage partner in St. George, Utah.
-                </p>
-            </div>
+           <div class="lg:col-span-1">
+    <a href="https://advancedrealty.com/linktree" class="inline-block mb-4">
+        <img src="https://advancedrealty.com/wp-content/uploads/2026/05/Logo-3at-small.png" 
+             alt="Advanced Realty Logo" 
+             class="h-12 w-auto">
+    </a>
+    <p class="text-sm text-gray-400 leading-relaxed mb-6">
+        Full-service property management and real estate brokerage partner in St. George, Utah.
+    </p>
+    <div class="flex space-x-4">
+        <a href="#" class="text-gray-400 hover:text-adv-gold transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+        <a href="#" class="text-gray-400 hover:text-adv-gold transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        <a href="#" class="text-gray-400 hover:text-adv-gold transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+    </div>
+</div>
             
             <div>
-                <h4 class="text-lg font-bold mb-4 text-adv-gold">Quick Links</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="<?php echo home_url('/'); ?>#service-hub" class="text-gray-400 hover:text-adv-gold transition duration-150">All Services</a></li>
-                    <li><a href="https://stgeorgestorage.com" target="_blank" class="text-gray-400 hover:text-adv-gold transition duration-150">Storage Facilities</a></li>
-                    <li><a href="<?php echo home_url('/contact'); ?>" class="text-gray-400 hover:text-adv-gold transition duration-150">Contact Us</a></li>
+                <h4 class="text-lg font-bold mb-6 text-adv-gold">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="<?php echo home_url('/'); ?>#service-hub" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">All Services</a></li>
+                    <li><a href="https://stgeorgestorage.com" target="_blank" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Storage Facilities</a></li>
+                    <li><a href="<?php echo home_url('/contact'); ?>" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Contact Us</a></li>
                 </ul>
             </div>
             
             <div>
-                <h4 class="text-lg font-bold mb-4 text-adv-gold">Client Portals</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="http://ownerwebaccess.rentmanager.com/OwnerLogin.aspx?CorpID=advr" target="_blank" class="text-gray-400 hover:text-adv-gold transition duration-150">Owner Portal</a></li>
-                    <li><a href="<?php echo home_url('/renter-resources'); ?>" target="_blank" class="text-gray-400 hover:text-adv-gold transition duration-150">Renter Portal</a></li>
-                    <li><a href="http://residentwebaccess.rentmanager.com/CustomerLogin.aspx?corpid=advr" target="_blank" class="text-gray-400 hover:text-adv-gold transition duration-150">HOA Portal</a></li>
+                <h4 class="text-lg font-bold mb-6 text-adv-gold">Client Portals</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="http://ownerwebaccess.rentmanager.com/OwnerLogin.aspx?CorpID=advr" target="_blank" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Owner Portal</a></li>
+                    <li><a href="<?php echo home_url('/renter-resources'); ?>" target="_blank" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">Renter Portal</a></li>
+                    <li><a href="http://residentwebaccess.rentmanager.com/CustomerLogin.aspx?corpid=advr" target="_blank" class="hover:text-white hover:translate-x-1 inline-block transition-all duration-200">HOA Portal</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-lg font-bold mb-4 text-adv-gold">Office</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="tel:4356744343" class="text-gray-400 hover:text-adv-gold transition duration-150 font-semibold">(435) 674-4343</a></li>
-                    <li><a href="mailto:info@advancedrealty.com" class="text-gray-400 hover:text-adv-gold transition duration-150">info@advancedrealty.com</a></li>
-                    <li class="mt-4">
+                <h4 class="text-lg font-bold mb-6 text-adv-gold">Contact Office</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start">
+                        <i data-lucide="phone" class="w-5 h-5 mr-3 text-adv-teal"></i>
+                        <a href="tel:4356744343" class="hover:text-white transition duration-150 font-semibold">(435) 674-4343</a>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="mail" class="w-5 h-5 mr-3 text-adv-teal"></i>
+                        <a href="mailto:info@advancedrealty.com" class="hover:text-white transition duration-150">info@advancedrealty.com</a>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-3 text-adv-teal shrink-0"></i>
                         <a href="https://maps.app.goo.gl/xvcs4HZL6zqiY3rT8" 
                            target="_blank" 
                            rel="noopener noreferrer" 
-                           class="text-gray-500 hover:text-adv-gold transition duration-150">
-                           1156 E 700 S Ste. 1, St. George, UT 84790
+                           class="hover:text-white transition duration-150 leading-relaxed">
+                           1156 E 700 S Ste. 1,<br>St. George, UT 84790
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
         
-        <div class="mt-8 pt-6 border-t border-gray-700 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-gray-500">
+        <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-sm text-gray-500">
             <div>
-                © <?php echo date('Y'); ?> Advanced Realty. All Rights Reserved. Utah Brokerage License #5472064-CN00. | 
-                <a href="<?php echo home_url('/privacy-policy'); ?>" class="hover:text-adv-gold">Privacy Policy</a> | 
-                <a href="<?php echo home_url('/terms-and-conditions'); ?>" class="hover:text-adv-gold">Terms & Conditions</a>
+                © <?php echo date('Y'); ?> Advanced Realty. All Rights Reserved. Utah Brokerage License #5472064-CN00. <br class="md:hidden">
+                <span class="hidden md:inline">|</span> 
+                <a href="<?php echo home_url('/privacy-policy'); ?>" class="hover:text-adv-gold transition-colors">Privacy Policy</a> | 
+                <a href="<?php echo home_url('/terms-and-conditions'); ?>" class="hover:text-adv-gold transition-colors">Terms & Conditions</a>
             </div>
             
             <div class="flex justify-center md:justify-end">
-                <img src="https://advancedrealty.com/wp-content/uploads/2026/03/equal-housing-opportunity-logo-1200w.png" 
-                     alt="Equal Housing Opportunity" 
-                     class="h-8 w-auto bg-white p-1 rounded-sm opacity-90 hover:opacity-100 transition-opacity" 
-                     title="Equal Housing Opportunity">
+                <div class="flex items-center space-x-2 text-xs font-bold text-gray-400 bg-gray-800 px-3 py-1.5 rounded">
+                    <i data-lucide="home" class="w-4 h-4"></i>
+                    <span>EQUAL HOUSING</span>
+                </div>
             </div>
         </div>
     </div>
 </footer>
 
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
     // Initialize Lucide Icons
     if (typeof lucide !== 'undefined') {
